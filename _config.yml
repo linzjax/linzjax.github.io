@@ -1,0 +1,12 @@
+# Site settings
+title: Lindsey Jacks
+email: linzjax@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  A collection of all of my thoughts, notes, and musings in one jumbled incoherent mess.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://linzjax.github.io" # the base hostname & protocol for your site
+twitter_username: linzjax
+github_username:  linzjax
+
+# Build settings
+markdown: kramdown
