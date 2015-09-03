@@ -21,7 +21,7 @@ body {
     color: $text-color;
     background-color: $background-color;
     .wrapper {
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: $header-color;
     }
     -webkit-text-size-adjust: 100%;
 }
