@@ -10,16 +10,19 @@ $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
+$header-font-family: "Lora", Arial, sans-serif;
 
 $spacing-unit:     30px;
 
-$text-color:       #1D1513;
-$background-color: #FEF9DD;
-$brand-color:      #3c8a80;
+$text-color:       #686B7C;
+$background-color: #EDFFFF;
+$header-color:		#fff;
+$brand-color:      #383D3B;
+$light-blue:		#52DEE5;
 
-$grey-color:       #3c8a80;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$purple-color:       #200A22;
+$purple-color-light: lighten($purple-color, 40%);
+$purple-color-dark:  darken($purple-color, 25%);
 
 // Width of the content area
 $content-width:    800px;
