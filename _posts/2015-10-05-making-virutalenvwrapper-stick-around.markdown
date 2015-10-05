@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Getting virtualenvwrapper to stick around"
-date:   2015-09-03 15:52:09
+date:   2015-10-05 15:52:09
 categories: how-to
 excerpt_separator: <!--more-->
 ---
