@@ -1,5 +1,7 @@
 ---
 layout: default
+excerpt_separator: <!--more-->
+
 ---
 
 <div class="home">
@@ -8,6 +10,7 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts %}
+    <div class='new-post'>
       <li>
         <header class="post-header">
           <h1>
@@ -17,9 +20,10 @@ layout: default
         </header>
 
         <article class="post-content">
-          {{ post.content }}
+           {{ post.content }}
         </article>
       </li>
+  </div>
     {% endfor %}
   </ul>
 

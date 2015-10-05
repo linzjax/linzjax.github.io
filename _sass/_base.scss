@@ -27,7 +27,6 @@ body {
 }
 
 
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -91,15 +90,16 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $purple-color;
     text-decoration: none;
+    font-weight: bold;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: $purple-color;
     }
 
     &:hover {
-        color: $text-color;
+        color: $purple-color-light;
     }
 }
 
@@ -109,8 +109,8 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $purple-color;
-    border-left: 4px solid $purple-color-light;
+    color: $accent-color;
+    border-left: 3px dotted $purple-color;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
     letter-spacing: -1px;
@@ -129,13 +129,15 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $purple-color-light;
+    color: $header-color;
     border-radius: 3px;
-    background-color: #eef;
+    border: solid 1px $accent-color;
+    padding: 10px;
+    background-color: $accent-color;
 }
 
 code {
-    padding: 1px 5px;
+    padding: 3px 5px;
 }
 
 pre {

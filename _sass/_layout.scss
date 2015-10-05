@@ -21,7 +21,6 @@
     margin-bottom: 0;
     padding-bottom: 0;
     padding-top: 20px;
-    box-shadow: 0 8px 5px -2px rgba(58, 142, 108, 0.6); 
     border-bottom: 10px solid $light-blue;   
 
     p {
@@ -30,7 +29,7 @@
         font-size: 20px;
     }
     a {
-        color: $brand-color;
+        color: $accent-color;
         
     }
 }
@@ -72,29 +71,47 @@ PAGE CONTENT
 **/
 
 .page-content .wrapper{
+    background-color: $background-color;
+
+    }
+
+.new-post{
     margin: 10px;
-    box-shadow: 0 -10px 5px -2px rgba(58, 142, 108, 0.6); 
+    box-shadow: 0 -10px 5px -5px rgba(141, 8, 1, 0.6); 
     border-top: 8px solid $light-blue;   
     margin: 0 auto;
     margin-top: 20px;
+    background-color: $header-color;
+    padding-bottom: 10px;
+    // border-bottom: 5px solid $light-blue; 
 
-    ul {
+    li {
         margin-left: 20px;
         padding-left: 20px;
     }
+
 }
 
 .post {
-    margin-left: 20px;
-    padding-left: 20px;
+    margin: 0 20px 0 20px;
+    padding: 0 20px 0 20px;
 }
 
 .post-header {
     margin-top: 20px;
 
     h1 {
-        color: $brand-color;
+        color: $accent-color;
+        font-weight: bold;
     }
+
+    a {
+        color: $accent-color;
+    }
+}
+
+.post-content {
+    margin-right: 20px;  
 }
 
 .page-header {
@@ -109,13 +126,40 @@ PAGE CONTENT
 /**
 FOOTER
 **/
+
+.site-footer {
+
+    margin: 10px;
+    box-shadow: 0 -10px 5px -5px rgba(141, 8, 1, 0.6); 
+    border-top: 8px solid $light-blue;   
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: $header-color;
+    padding-top: 10px;
+
+
+    a {
+        color: $accent-color;
+        font-weight: normal;
+
+        &:hover {
+            color: $purple-color;
+        }
+    }
+
+    .wrapper {
+        margin-left: 0;
+    }
+}
+
 .footer-heading, .footer-col-wrapper{
     margin-left: 20px;
     padding-left: 20px;
 }
 
 .footer-heading {
-    color: $brand-color;
+    color: $accent-color;
+    font-weight: bold;
 }
 
 
