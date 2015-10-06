@@ -15,7 +15,7 @@ To install virtualenv, open up your terminal and type in:
 
 ` $ pip install virtualenv `
 
-To create a virutalenv instance, switch into your project director:
+To create a virutalenv instance, switch into your project directory:
 
 ` $ cd my_project_folder `
 
@@ -85,13 +85,13 @@ to see hidden files (ones that start with a .dot). Hopefully you'll see it there
 
 If not, type:
 
-` $ echo 'hello' >> .bashrc `
+` $ touch .bashrc `
 
 Now, regardless of it if already existed or you just created it, type:
 
 ` $ open .bashrc -a "Text Editor of Your Choice" ` (capital letters in the application name matter. So I would type "Sublime Text 2".)
 
-Delete the "hello" text and add the three following lines of code:
+Now add the three following lines of code:
 
 
 	export WORKON_HOME=$HOME/.virtualenvs  
