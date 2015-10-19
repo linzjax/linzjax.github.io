@@ -98,10 +98,23 @@ h1, h2, h3, h4, h5, h6 {
 
 .home {
   display: flex;
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
-  margin-top: 100px;
-  border: 1px black solid; }
+  margin-top: 100px; }
+  .home h1 {
+    text-align: center;
+    font-size: 3em; }
+    .home h1 a {
+      text-decoration: none;
+      color: #5bc292;
+      text-shadow: 2px 2px black;
+      text-shadow: -2px 2px black; }
+  .home p {
+    font-size: 1.3em; }
+  .home .post-content {
+    border-bottom: black 1px solid;
+    margin-bottom: 50px;
+    padding-bottom: 50px; }
 
 .site-nav {
   display: flex;
