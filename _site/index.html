@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+  <div class='container'>
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
   <meta name="description" content="A collection of all of my thoughts, notes, and musings in one jumbled incoherent mess.
 ">
 
-  <link href='http://fonts.googleapis.com/css?family=Lora|Quattrocento+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Over+the+Rainbow|Old+Standard+TT' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://linzjax.github.io/">
   <link rel="alternate" type="application/rss+xml" title="LinzJax:" href="http://linzjax.github.io/feed.xml" />
@@ -22,20 +22,15 @@
     <header class="site-header">
 
   <div class="wrapper">
+  <div class="title">
+    <a  href="/">
+      <h1>Lindsey Jacks</h1>
+    </a>
+    <p>Front-End Developer</p>
+    <p>Potentially Coherent</p>
+  </div>
 
-      <div class="site-title"><a  href="/">LinzJax:</a></h1><br><div class= 'site-title-description'><p>
-      hopefully helpful<span> / </span>potentially coherent<span> / </span>mostly rambling</p>
-    </div>
-
-    <!-- <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-
+    <nav class="site-nav">
       <div class="trigger">
         
           
@@ -49,9 +44,10 @@
           
         
       </div>
-    </nav> -->
+    </nav>
 
   </div>
+</a>
   
 
 
@@ -71,9 +67,9 @@
       <li>
         <header class="post-header">
           <h1>
-            <a class="post-link" href="/how-to/2015/09/03/making-virutalenvwrapper-stick-around.html">Getting virtualenvwrapper to stick around</a>
+            <a class="post-link" href="/how-to/2015/10/05/making-virutalenvwrapper-stick-around.html">Getting virtualenvwrapper to stick around</a>
           </h1>
-           <p class="post-meta">Sep 3, 2015</p>
+           <p class="post-meta">Oct 5, 2015</p>
         </header>
 
         <article class="post-content">
@@ -87,7 +83,7 @@
 
 <p><code> $ pip install virtualenv </code></p>
 
-<p>To create a virutalenv instance, switch into your project director:</p>
+<p>To create a virutalenv instance, switch into your project directory:</p>
 
 <p><code> $ cd my_project_folder </code></p>
 
@@ -156,13 +152,13 @@ In your terminal, type:</p>
 
 <p>If not, type:</p>
 
-<p><code> $ echo 'hello' &gt;&gt; .bashrc </code></p>
+<p><code> $ touch .bashrc </code></p>
 
 <p>Now, regardless of it if already existed or you just created it, type:</p>
 
 <p><code> $ open .bashrc -a "Text Editor of Your Choice" </code> (capital letters in the application name matter. So I would type “Sublime Text 2”.)</p>
 
-<p>Delete the “hello” text and add the three following lines of code:</p>
+<p>Now add the three following lines of code:</p>
 
 <pre><code>export WORKON_HOME=$HOME/.virtualenvs  
 export PROJECT_HOME=$HOME/Devel
@@ -270,5 +266,5 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 
   </body>
-
+</div>
 </html>
