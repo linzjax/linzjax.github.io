@@ -4,6 +4,11 @@ title: About
 permalink: /about/
 ---
 
-Hey y'all. My name is Lindsey Jacks, and I am currently attending Recurse Center where I am training to become a front-end developer.
+## Just a few fun facts
 
-My appologies for the current state of this site. I am attempting to blow things up and put them back together... so pardon the mess.
+Hey y'all! I'm originally from Arkansas. I learned to spin fire in 2013. I've traveled to 13 different countries, and spent three months living in Florence. I can bend my thumb behind my hand, and I cut my own hair (for now).
+
+
+##What I'm working on now
+
+I'm currently "never graduating" at the Recurse Center where I'm expanding my knowledge of javascript and exploring full-stack frameworks.
