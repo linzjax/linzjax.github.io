@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Open source is important for new coders"
 author: Lindsey Jacks
+title:  "Why participating in open source is important for new coders"
 date:   2015-10-29 15:52:09
 categories: My experiences
 excerpt: <p>Getting into coding is scary, and encouragement is an absolute necessity. Because the open source community benefits so much from helping each other and from helping new people getting involved, <a href="http://www.erikaheidi.com/blog/a-beginners-guide-to-open-source-making-your-first-contribution?utm_medium=community&utm_source=hacktoberfest&utm_campaign=digest1">they are endlessly nurturing</a>, and this is invaluable for anyone learning to code.</p>
