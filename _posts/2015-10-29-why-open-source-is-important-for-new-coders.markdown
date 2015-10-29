@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Open source is important for new coders"
+title:  "Why participating in open source is important for new coders"
 date:   2015-10-29 15:52:09
 categories: jekyll update
 ---
