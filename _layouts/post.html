@@ -1,25 +1,25 @@
 ---
 layout: default
+excerpt_separator: <!--more-->
 ---
-    <div class="title">
-      <a  href="{{ site.baseurl }}/">
-        <h1>Lindsey Jacks</h1>
+    <div class="post-title">
+      <a  href="#">
+        <h1>{{ page.title }}</h1>
         </a>
-        <p>Front-End Developer</p>
-        <p>Potentially Coherent</p>
+            <!-- <h1 class="post-title"></h1> -->
+        <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+        <!-- <p>Front-End Developer</p>
+        <p>Potentially Coherent</p> -->
       </div>
     </div>
     </a>
-    </header>
+</header>
 
     <div class="page-content">
     <div class="wrapper">
 		<div class="post">
 
-		  <header class="post-header">
-		    <h1 class="post-title">{{ page.title }}</h1>
-		    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-		  </header>
+		  
 
 		  <article class="post-content">
 		    {{ content }}

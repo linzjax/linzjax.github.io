@@ -6,9 +6,78 @@
 </description>
     <link>http://linzjax.github.io/</link>
     <atom:link href="http://linzjax.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 23 Oct 2015 12:10:38 -0400</pubDate>
-    <lastBuildDate>Fri, 23 Oct 2015 12:10:38 -0400</lastBuildDate>
+    <pubDate>Thu, 29 Oct 2015 17:03:48 -0400</pubDate>
+    <lastBuildDate>Thu, 29 Oct 2015 17:03:48 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Open source is important for new coders</title>
+        <description>&lt;p&gt;As &lt;a href=&quot;https://hacktoberfest.digitalocean.com/&quot;&gt;#Hacktober&lt;/a&gt; is coming to a close, I’ve been reflecting on my experience with open source. When I initially started learning to code, it was pretty daunting with the amount of information out there, and there’s a lot of people with a lot of advice (I know because I asked just about everyone I could). One of the biggest hurdles that I ran into was knowing when I was getting past the “&lt;a href=&quot;http://www.vikingcodeschool.com/posts/why-learning-to-code-is-so-damn-hard&quot;&gt;hand holding honeymoon&lt;/a&gt;” phase into working on “real” projects. The “handholding honeymoon phase” occurs when you’re just starting out and beginner tutorials are walking you through carefully constructed problems with carefully constructed solutions and oh my gosh you just built something congratulations! You’ve learned the basics of coding!&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;But what now?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;What should the next steps be? There are so many tutorials out there, and so many different languages and frameworks, and new ones coming out every day. How do you begin to learn what you don’t know, especially when you don’t even know what you don’t know?&lt;/p&gt;
+
+&lt;p&gt;The advice that I got over and over again was just to work on a project. Doesn’t matter what, just build something. But that means coming up with an idea, and then a plan for how to build it, and then figuring out how all of the pieces fit together. That’s not daunting or overwhelming at all, especially when you’re used to beginner tutorials that have the framework and design already set up, and now you have to for figure out everything that goes into making something a “real” app and you have no idea how to make user accounts or set up databases and servers and what the heck is a framework?! It was almost enough to convince me to just stick to bartending.&lt;/p&gt;
+
+&lt;p&gt;Thankfully I’ve made it past this consistently overwhelmed phase, and open source projects were a huge player in getting me through this slump.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Gaining confidence in your own ability&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I was lucky enough to have a group of coding friends who were extremely supportive and wanted to teach me everything they knew, and I remember one of them sitting me down to walk through contributing to an open source project that needed help. She pointed out a bug, then walked me through where things lived in the code (and how to read where things lived), and then patiently waited as I remembered my basic python and what could be done to fix the problem.&lt;/p&gt;
+
+&lt;p&gt;All it was was string manipulation. I knew how to do that. That’s not a real project. If I know how to do that that’s not &lt;strong&gt;real&lt;/strong&gt; coding.&lt;/p&gt;
+
+&lt;p&gt;But it was. That was all it took, and like that I had made my first commit and my first pull request. I spent the rest of the day riding between a high of “I did it!” and “wait… that’s it?”.&lt;/p&gt;
+
+&lt;p&gt;And yes, that was it. Just like that I was hooked. The developers passed along any simple bugs they ran into for me to work through, and even though they might have been able to find it and fix it faster, they knew that allowing me time to sort through all of this new code, translate it, and practice fixing things was invaluable, so they happily let me do it. I gained so much confidence from being able to make positive changes to real code, and I gained a ton of experience just from working my way through a new set of code every day.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The open source community wants to help themselves by helping you.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This really taught me to appreciate the open source community. Getting into coding is scary, and encouragement is an absolute necessity. Because the open source community benefits so much from helping each other and from helping new people getting involved, &lt;a href=&quot;http://www.erikaheidi.com/blog/a-beginners-guide-to-open-source-making-your-first-contribution?utm_medium=community&amp;amp;utm_source=hacktoberfest&amp;amp;utm_campaign=digest1&quot;&gt;they are endlessly nurturing&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It still amazes me how much time people are willing to set aside to review, edit, re-review and re-edit code to make sure that you’re submitting your absolute best work. You get to work on projects, get code review, and benefit the community at large all in one go.&lt;/p&gt;
+
+&lt;p&gt;Getting code reviewed can initially be very intimidating. It might seem like they’re being super nitpicky or their standards are too high or you’re not good enough, but really they’re helping you write better code for everyone’s sake.&lt;/p&gt;
+
+&lt;p&gt;Another great thing about this community is that no contribution is too small. You’re not expected (nor would they necessarily want you to) completely overhaul their code with some new feature. Even editing the READMe’s to be more accessible and understandable is appreciated. If there’s a tiny little glitch that you think is insignificant, fix it anyway! Maybe they just haven’t gotten around to it and you’re saving them the trouble.&lt;/p&gt;
+
+&lt;p&gt;While I was lucky enough to have friends to walk me through the first step, I’ve run across plenty of projects that have set aside issues with directions to what file the problem lives in so you only have to focus on one file. Some projects have even put together a list of “low hanging fruit” problems that need to be fixed. They want your help, and are trying to make it as easily as possible to contribute, so help!&lt;/p&gt;
+
+&lt;p&gt;Now, this isn’t to say that every open source project you come across is going to be scrambling over themselves to work with you and your code. I’ve been very fortunate to find projects that are welcoming and patient, and plenty of people have put together &lt;a href=&quot;https://hacktoberfest.digitalocean.com/?utm_medium=community&amp;amp;utm_source=hacktoberfest&amp;amp;utm_campaign=confirmationemail#projects&quot;&gt;great lists of projects&lt;/a&gt; to get started on. But don’t get discouraged if one that you find isn’t greeting you with open arms. Chalk it up as a learning experience and find a new one.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It will help you learn to read new accents&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A skill that I have found invaluable is what I call understanding accents. I view learning to code in the same light as learning a foreign language. In my high school french class we had a set curriculum with the same soothing voice speaking french in a very clear, slow and precise accent, which was great. I understood french, and I could repeat it. Yay! Then we’d watch a video of real people actually speaking french and suddenly it all went out the window. It was always such a frustrating feeling.&lt;/p&gt;
+
+&lt;p&gt;When I started learning javascript, the same thing happened. You have carefully constructed code you work with, you learn to parrot that code, and you learn specific techniques for dealing with certain challenges and you start to feel pretty good about yourself. Then suddenly you’re out in the “real world” without these carefully constructed problems and no handlebars (well maybe &lt;a href=&quot;http://handlebarsjs.com/&quot;&gt;Handlebars&lt;/a&gt;… Anyway…).&lt;/p&gt;
+
+&lt;p&gt;Staring at giant repositories of code was terrifying, but I started to force myself to look through the files until I found one in a language that I recognized. Then I would go through the file, looking up terms I didn’t recognize, slowly piecing the bits of the file together until it started to make sense. Sure, there were still chunks I didn’t quite understand, but it exposed me to a whole new variety of coding techniques, syntax, and problem solving. I was starting to understand different accents.&lt;/p&gt;
+
+&lt;p&gt;Huge chunks of code can be intimidating when you’re just starting out, and the only way it’s going to get easier is if you practice navigating them. It taught me to comfortably block out all of the things that I don’t need and focus only on the code necessary to address the problem at hand.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I know that #Hacktoberfest is coming to an end, but that doesn’t mean that you can’t still contribute to open source projects. It’s a never ending series of challenges to help you practice and get better, with people there to help you along the way, &lt;a href=&quot;https://guides.github.com/activities/contributing-to-open-source/?utm_medium=community&amp;amp;utm_source=hacktoberfest&amp;amp;utm_campaign=digest1&quot;&gt;so get started&lt;/a&gt;!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 29 Oct 2015 11:52:09 -0400</pubDate>
+        <link>http://linzjax.github.io/my/experiences/2015/10/29/why-open-source-is-important-for-new-coders.html</link>
+        <guid isPermaLink="true">http://linzjax.github.io/my/experiences/2015/10/29/why-open-source-is-important-for-new-coders.html</guid>
+        
+        
+        <category>my</category>
+        
+        <category>experiences</category>
+        
+      </item>
     
       <item>
         <title>Getting virtualenvwrapper to stick around</title>

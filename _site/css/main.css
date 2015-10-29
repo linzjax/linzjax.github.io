@@ -68,19 +68,22 @@ p {
   font-size: 1.3em;
   color: #1B2022; }
 
+a {
+  transition: color .5s;
+  text-decoration: none; }
+
 .site-header {
   position: relative;
-  height: 700px;
+  height: 600px;
   width: 100%; }
 
 .banner-image {
   background-image: url("./../img/header_img2.png");
-  background-repeat: no-repeat;
+  background-size: cover;
   position: fixed;
-  overflow: hidden;
   width: 100%;
-  height: 100%;
-  top: 0;
+  height: 600px;
+  top: -10px;
   left: 0;
   z-index: -1; }
 
@@ -110,65 +113,73 @@ p {
     margin-bottom: -10px; }
 
 .page-content {
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  padding-top: 100px; }
 
 .home {
   display: flex;
   width: 70%;
-  margin: 0 auto;
-  padding-top: 100px; }
+  margin: 0 auto; }
   .home h1 {
     text-align: center;
     font-size: 3em; }
     .home h1 a {
       text-decoration: none;
-      color: #020002;
-      transition: color .5s; }
+      color: #020002; }
       .home h1 a:hover {
         color: #5bc292; }
   .home p {
     font-size: 1.3em;
     color: #1B2022; }
-  .home .post-content {
+  .home .post-excerpt {
     border-bottom: #020002 1px solid;
     margin-bottom: 50px;
     padding-bottom: 50px;
     color: #1B2022; }
-    .home .post-content a {
-      color: #5bc292;
-      transition: color .5s; }
-      .home .post-content a:hover {
+    .home .post-excerpt a {
+      color: #5bc292; }
+      .home .post-excerpt a:hover {
+        color: #020002; }
+  .home .read-more {
+    width: 100%; }
+    .home .read-more button {
+      margin: 0 auto;
+      padding: 0 auto;
+      margin-top: 20px;
+      font-size: 1.2em; }
+      .home .read-more button a {
+        color: #1B2022; }
+        .home .read-more button a:hover {
+          color: #5bc292; }
+
+.blog {
+  display: flex;
+  width: 70%;
+  margin: 0 auto; }
+  .blog h1 {
+    text-align: center;
+    font-size: 3em; }
+    .blog h1 a {
+      text-decoration: none;
+      color: #020002; }
+      .blog h1 a:hover {
+        color: #5bc292; }
+  .blog p {
+    font-size: 1.3em;
+    color: #1B2022; }
+  .blog .post-excerpt {
+    border-bottom: #020002 1px solid;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    color: #1B2022; }
+    .blog .post-excerpt a {
+      color: #5bc292; }
+      .blog .post-excerpt a:hover {
         color: #020002; }
 
 .post-list {
   margin: 0;
   padding: 0; }
-
-.post {
-  width: 70%;
-  margin: 0 auto; }
-  .post h1 {
-    text-align: center;
-    font-size: 3em; }
-    .post h1 a {
-      text-decoration: none;
-      color: #020002;
-      transition: color .5s; }
-      .post h1 a:hover {
-        color: #5bc292; }
-  .post p {
-    font-size: 1.3em;
-    color: #1B2022; }
-  .post .post-content {
-    border-bottom: #020002 1px solid;
-    margin-bottom: 50px;
-    padding-bottom: 50px;
-    color: #1B2022; }
-    .post .post-content a {
-      color: #5bc292;
-      transition: color .5s; }
-      .post .post-content a:hover {
-        color: #020002; }
 
 .site-nav {
   display: flex;
@@ -182,10 +193,62 @@ p {
     margin: 20px;
     color: white;
     text-decoration: none;
-    display: inline-block;
-    transition: color .5s; }
+    display: inline-block; }
     .site-nav a:hover {
       color: #5bc292; }
+  .site-nav p {
+    display: inline-block; }
+
+.post-title {
+  width: 80%;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 0;
+  text-align: center;
+  position: absolute;
+  margin-left: 10%; }
+  .post-title a {
+    text-decoration: none;
+    color: #FFFFFF; }
+    .post-title a:hover {
+      color: #5bc292; }
+  .post-title h1 {
+    font-size: 6em;
+    line-height: 1em;
+    font-family: 'Old Standard TT', serif;
+    padding: 0;
+    margin: 0; }
+  .post-title p {
+    font-family: 'Old Standard TT', serif;
+    color: #5bc292;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+    margin-top: 100px; }
+
+.post {
+  width: 70%;
+  margin: 0 auto; }
+  .post h1 {
+    text-align: center;
+    font-size: 3em; }
+    .post h1 a {
+      text-decoration: none;
+      color: #020002; }
+      .post h1 a:hover {
+        color: #5bc292; }
+  .post p {
+    font-size: 1.3em;
+    color: #1B2022; }
+  .post .post-content {
+    border-bottom: #020002 1px solid;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    color: #1B2022; }
+    .post .post-content a {
+      color: #5bc292; }
+      .post .post-content a:hover {
+        color: #020002; }
 
 .about {
   width: 70%;
@@ -222,8 +285,7 @@ p {
     .site-footer .wrapper .footer-col a {
       font-size: 1.3em;
       text-decoration: none;
-      color: #FFFFFF;
-      transition: color .5s; }
+      color: #FFFFFF; }
       .site-footer .wrapper .footer-col a:hover {
         color: #5bc292; }
     .site-footer .wrapper .footer-col .icon {
@@ -245,24 +307,75 @@ p {
     align-items: flex-end;
     justify-content: space-between; }
 
+@media (max-width: 1300px) {
+  .post-title h1 {
+    font-size: 5em; }
+  .post-title p {
+    margin-top: 50px; } }
 @media screen and (max-width: 800px) {
   .site-header {
     height: 400px; }
 
+  .banner-image {
+    height: 400px;
+    top: -10px;
+    left: 0;
+    z-index: -1; }
+
   .title {
-    margin-top: 15%; }
+    margin-top: 5%; }
     .title h1 {
-      font-size: 3em; }
+      font-size: 4.5em; }
     .title p {
-      font-size: 2em; } }
+      font-size: 2em; }
+
+  .post-title {
+    margin-top: 5%; }
+    .post-title h1 {
+      font-size: 4.5em; }
+    .post-title p {
+      margin-top: 10px;
+      font-size: 2em; }
+
+  .home {
+    width: 90%; }
+    .home h1 {
+      font-size: 2.5em; }
+
+  .site-footer .wrapper .text {
+    font-size: 1em;
+    text-align: right; }
+  .site-footer .wrapper a {
+    font-size: 1em; } }
 @media screen and (max-width: 600px) {
   .site-header {
     height: 300px; }
 
-  .title h1 {
-    font-size: 2.5em; }
-  .title p {
-    font-size: 1.5em; } }
+  .banner-image {
+    height: 300px;
+    top: -10px;
+    left: 0;
+    z-index: -1; }
+
+  .title {
+    margin-top: 1%; }
+    .title h1 {
+      font-size: 3em; }
+    .title p {
+      font-size: 1.5em; }
+
+  .post-title {
+    margin-top: 1%; }
+    .post-title h1 {
+      font-size: 3em; }
+    .post-title p {
+      margin-top: 10px;
+      font-size: 1.2em; }
+
+  .home h1 {
+    font-size: 2em; }
+  .home p {
+    font-size: 1.2em; } }
 /**
  * Syntax highlighting styles
  */

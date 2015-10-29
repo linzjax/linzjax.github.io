@@ -1,11 +1,13 @@
 ---
 layout: post
 title:  "Open source is important for new coders"
+author: Lindsey Jacks
 date:   2015-10-29 15:52:09
-categories: jekyll update
+categories: My experiences
+excerpt: <p>Getting into coding is scary, and encouragement is an absolute necessity. Because the open source community benefits so much from helping each other and from helping new people getting involved, <a href="http://www.erikaheidi.com/blog/a-beginners-guide-to-open-source-making-your-first-contribution?utm_medium=community&utm_source=hacktoberfest&utm_campaign=digest1">they are endlessly nurturing</a>, and this is invaluable for anyone learning to code.</p>
 ---
 
-As [#Hacktober](https://hacktoberfest.digitalocean.com/) is coming to a close, I've been reflecting on my experience with open source.  When I initially started learning to code, it was pretty daunting with the amount of information out there, and there's a lot of people with a lot of advice (I know because I asked just about everyone I could). One of the biggest hurdles that I ran into was knowing when I was getting past the “[hand holding honeymoon](http://www.vikingcodeschool.com/posts/why-learning-to-code-is-so-damn-hard)” phase into working on "real" projects. The “handholding honeymoon phase” occurs when you’re just starting out and beginner tutorials are walking you through carefully constructed problems with carefully constructed solutions and oh my gosh you just built something congratulations! You’ve learned the basics of coding!
+As [#Hacktober](https://hacktoberfest.digitalocean.com/) is coming to a close, I've been reflecting on my experience with open source. When I initially started learning to code, it was pretty daunting with the amount of information out there, and there's a lot of people with a lot of advice (I know because I asked just about everyone I could). One of the biggest hurdles that I ran into was knowing when I was getting past the “[hand holding honeymoon](http://www.vikingcodeschool.com/posts/why-learning-to-code-is-so-damn-hard)” phase into working on "real" projects. The “handholding honeymoon phase” occurs when you’re just starting out and beginner tutorials are walking you through carefully constructed problems with carefully constructed solutions and oh my gosh you just built something congratulations! You’ve learned the basics of coding!
 
 <br />
 
