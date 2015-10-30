@@ -3,7 +3,7 @@ layout: post
 title:  "Getting virtualenvwrapper to stick around"
 date:   2015-10-05 15:52:09
 categories: how-to
-excerpt_separator: <!--more-->
+excerpt: "<p>virtualenvwrapper is great in that it allows for more memorable, human-readable commands. Unfortunately, the last tutorial I followed for installing it left out one important detail: how to make it stick around so it's available every time you open your terminal.</p>"
 ---
 **Virtual environments are awesome.** 
 

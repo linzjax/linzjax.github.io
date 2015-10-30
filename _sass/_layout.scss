@@ -1,11 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
 p {
     font-size: 1.3em;
     color: $font-color;
 }
 
 a {
+    color: $teal-color;
     transition: color .5s;
     text-decoration: none;
+    &:hover {
+        color: $font-color;
+    }
 }
 
 
@@ -42,13 +50,13 @@ a {
     }
     h1 {
         font-size: 6em;
-        font-family: 'Over the Rainbow', cursive;
+        font-family: $header-font-family;
         padding: 0;
         margin: 0;
         margin-bottom: -20px;
     }
     p {
-        font-family: 'Old Standard TT', serif;
+        font-family: $base-font-family;
         color: $teal-color;
         font-size: 2.4em;
         padding: 0;
@@ -89,7 +97,7 @@ a {
     }
 
     .post-excerpt {
-        border-bottom: $darkest-color 1px solid;
+        //border-bottom: $darkest-color 1px solid;
         margin-bottom: 50px;
         padding-bottom: 50px;
         color: $font-color;
@@ -103,28 +111,10 @@ a {
         }
     }
 
-    .read-more {
-        width: 100%;
-        
-        button {
-            margin: 0 auto;
-            padding: 0 auto;
-            margin-top: 20px;
-            
-            font-size: 1.2em;
-            a {
-                color: $font-color;
-                &:hover {
-                    color: $teal-color;
-                }
-            }
-        }
-    }
-
 }
 
 .blog {
-    display: flex;
+display: flex;
     width: 70%;
     margin: 0 auto;
     
@@ -150,7 +140,7 @@ a {
 
     .post-excerpt {
         border-bottom: $darkest-color 1px solid;
-        margin-bottom: 50px;
+        margin-bottom: 1000px;
         padding-bottom: 50px;
         color: $font-color;
 
@@ -163,11 +153,62 @@ a {
         }
     }
 
+    .new-post {
+        
+
+        .post-content {
+            //border-bottom: $darkest-color 1px solid;
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+            color: $font-color;
+        }
+    }
+
+}
+
+.read-more {
+    width: 100%;
+    padding: 0 auto;
+    position: relative;
+    margin-bottom: 100px;
+    
+    button {
+        position: absolute;
+        background-color: $background-color;
+        border: 1px solid $darkest-color;
+        margin-top: 15px;
+        left: 40%;
+        transition: 0.2s background-color;
+        padding: 10px;
+        font-family: $base-font-family;
+
+        a {
+            color: $font-color;
+            transition: 0.2s color;
+
+        }
+
+        &:hover {
+            background-color: $font-color;
+            a {
+                color: $background-color;
+            }
+        }
+        
+        font-size: .9em;
+        font-family: $base-font-family;
+
+    }
 }
 
 .post-list {
     margin: 0;
     padding: 0;
+}
+
+.rss-subscribe {
+    margin-right: 50px;
+    text-align: right;
 }
 
 
@@ -217,13 +258,13 @@ a {
     h1 {
         font-size: 6em;
         line-height: 1em;
-        font-family: 'Old Standard TT', serif;
+        font-family: $base-font-family;
         padding: 0;
         margin: 0;
         
     }
     p {
-        font-family: 'Old Standard TT', serif;
+        font-family: $base-font-family;
         color: $teal-color;
         font-size: 2em;
         padding: 0;

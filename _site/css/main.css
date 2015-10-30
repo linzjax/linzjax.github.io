@@ -64,13 +64,19 @@ h1, h2, h3, h4, h5, h6 {
   height: 16px;
   vertical-align: middle; }
 
+* {
+  box-sizing: border-box; }
+
 p {
   font-size: 1.3em;
   color: #1B2022; }
 
 a {
+  color: #5bc292;
   transition: color .5s;
   text-decoration: none; }
+  a:hover {
+    color: #1B2022; }
 
 .site-header {
   position: relative;
@@ -100,12 +106,12 @@ a {
     color: #FFFFFF; }
   .title h1 {
     font-size: 6em;
-    font-family: 'Over the Rainbow', cursive;
+    font-family: "Over the Rainbow", cursive;
     padding: 0;
     margin: 0;
     margin-bottom: -20px; }
   .title p {
-    font-family: 'Old Standard TT', serif;
+    font-family: "Old Standard TT", serif;
     color: #5bc292;
     font-size: 2.4em;
     padding: 0;
@@ -132,7 +138,6 @@ a {
     font-size: 1.3em;
     color: #1B2022; }
   .home .post-excerpt {
-    border-bottom: #020002 1px solid;
     margin-bottom: 50px;
     padding-bottom: 50px;
     color: #1B2022; }
@@ -140,17 +145,6 @@ a {
       color: #5bc292; }
       .home .post-excerpt a:hover {
         color: #020002; }
-  .home .read-more {
-    width: 100%; }
-    .home .read-more button {
-      margin: 0 auto;
-      padding: 0 auto;
-      margin-top: 20px;
-      font-size: 1.2em; }
-      .home .read-more button a {
-        color: #1B2022; }
-        .home .read-more button a:hover {
-          color: #5bc292; }
 
 .blog {
   display: flex;
@@ -169,17 +163,49 @@ a {
     color: #1B2022; }
   .blog .post-excerpt {
     border-bottom: #020002 1px solid;
-    margin-bottom: 50px;
+    margin-bottom: 1000px;
     padding-bottom: 50px;
     color: #1B2022; }
     .blog .post-excerpt a {
       color: #5bc292; }
       .blog .post-excerpt a:hover {
         color: #020002; }
+  .blog .new-post .post-content {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    color: #1B2022; }
+
+.read-more {
+  width: 100%;
+  padding: 0 auto;
+  position: relative;
+  margin-bottom: 100px; }
+  .read-more button {
+    position: absolute;
+    background-color: #FFFFFF;
+    border: 1px solid #020002;
+    margin-top: 15px;
+    left: 40%;
+    transition: 0.2s background-color;
+    padding: 10px;
+    font-family: "Old Standard TT", serif;
+    font-size: .9em;
+    font-family: "Old Standard TT", serif; }
+    .read-more button a {
+      color: #1B2022;
+      transition: 0.2s color; }
+    .read-more button:hover {
+      background-color: #1B2022; }
+      .read-more button:hover a {
+        color: #FFFFFF; }
 
 .post-list {
   margin: 0;
   padding: 0; }
+
+.rss-subscribe {
+  margin-right: 50px;
+  text-align: right; }
 
 .site-nav {
   display: flex;
@@ -215,11 +241,11 @@ a {
   .post-title h1 {
     font-size: 6em;
     line-height: 1em;
-    font-family: 'Old Standard TT', serif;
+    font-family: "Old Standard TT", serif;
     padding: 0;
     margin: 0; }
   .post-title p {
-    font-family: 'Old Standard TT', serif;
+    font-family: "Old Standard TT", serif;
     color: #5bc292;
     font-size: 2em;
     padding: 0;
