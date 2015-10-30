@@ -180,24 +180,23 @@ a {
   padding: 0 auto;
   position: relative;
   margin-bottom: 100px; }
-  .read-more button {
+  .read-more div {
     position: absolute;
     background-color: #FFFFFF;
     border: 1px solid #020002;
+    border-radius: 2px;
     margin-top: 15px;
     left: 40%;
     transition: 0.2s background-color;
     padding: 10px;
     font-family: "Old Standard TT", serif;
+    color: #1B2022;
+    transition: 0.2s color;
     font-size: .9em;
     font-family: "Old Standard TT", serif; }
-    .read-more button a {
-      color: #1B2022;
-      transition: 0.2s color; }
-    .read-more button:hover {
-      background-color: #1B2022; }
-      .read-more button:hover a {
-        color: #FFFFFF; }
+    .read-more div:hover {
+      background-color: #1B2022;
+      color: #5bc292; }
 
 .post-list {
   margin: 0;
