@@ -126,25 +126,27 @@ a {
   display: flex;
   width: 70%;
   margin: 0 auto; }
-  .home h1 {
-    text-align: center;
-    font-size: 3em; }
-    .home h1 a {
-      text-decoration: none;
-      color: #020002; }
-      .home h1 a:hover {
-        color: #5bc292; }
-  .home p {
-    font-size: 1.3em;
-    color: #1B2022; }
-  .home .post-excerpt {
-    margin-bottom: 50px;
-    padding-bottom: 50px;
-    color: #1B2022; }
-    .home .post-excerpt a {
-      color: #5bc292; }
-      .home .post-excerpt a:hover {
+  .home .post-list {
+    width: 70%; }
+    .home .post-list h1 {
+      text-align: center;
+      font-size: 3em; }
+      .home .post-list h1 a {
+        text-decoration: none;
         color: #020002; }
+        .home .post-list h1 a:hover {
+          color: #5bc292; }
+    .home .post-list p {
+      font-size: 1.3em;
+      color: #1B2022; }
+    .home .post-list .post-excerpt {
+      margin-bottom: 50px;
+      padding-bottom: 50px;
+      color: #1B2022; }
+      .home .post-list .post-excerpt a {
+        color: #5bc292; }
+        .home .post-list .post-excerpt a:hover {
+          color: #020002; }
 
 .blog {
   display: flex;

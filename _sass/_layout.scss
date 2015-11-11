@@ -76,37 +76,39 @@ a {
     width: 70%;
     margin: 0 auto;
     
+    .post-list {
+        width: 70%;
+        h1 {
+            text-align: center;
+            font-size: 3em;
 
-    h1 {
-        text-align: center;
-        font-size: 3em;
+            a {
+                text-decoration: none;
+                color: $darkest-color;
 
-        a {
-            text-decoration: none;
-            color: $darkest-color;
-
-            &:hover {
-                color: $teal-color;
+                &:hover {
+                    color: $teal-color;
+                }
             }
         }
-    }
 
-    p {
-        font-size: 1.3em;
-        color: $font-color;
-    }
+        p {
+            font-size: 1.3em;
+            color: $font-color;
+        }
 
-    .post-excerpt {
-        //border-bottom: $darkest-color 1px solid;
-        margin-bottom: 50px;
-        padding-bottom: 50px;
-        color: $font-color;
+        .post-excerpt {
+            //border-bottom: $darkest-color 1px solid;
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+            color: $font-color;
 
-        a {
-            color: $teal-color;
+            a {
+                color: $teal-color;
 
-            &:hover {
-                color: $darkest-color;
+                &:hover {
+                    color: $darkest-color;
+                }
             }
         }
     }
@@ -114,7 +116,7 @@ a {
 }
 
 .blog {
-display: flex;
+    display: flex;
     width: 70%;
     margin: 0 auto;
     
