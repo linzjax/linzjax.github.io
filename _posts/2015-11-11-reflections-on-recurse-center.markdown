@@ -10,15 +10,15 @@ And just like that it was over. If you had told me a year ago that I would quit 
 
 Reflecting back on my experience, I realized that there were a lot of things I wish I had known, or maybe had a heads up for what to expect. So, for future Recursers: here are my thoughts. Hopefully they'll help someone.
 
-**1. It's ok to just spend time just learning.**
+**1. It's ok to spend time just learning.**
 
 When I got to Recurse I was asked over and over again "So what are you working on?". It wasn't until the second half of my batch that I realized this is Recurse equivalent of "how are you doing?". It wasn't meant to be intimidating. It wasn't meant to suggest that I had to have a project idea right then and there. It was genuinely because people were interested. That being said, it was still horribly intimidating. I barely knew enough JavaScript to put together a tictactoe game. How was I going to come up with a full scale project?!
 
 I'm going to tell you a little secret: what you're working on doesn't have to be a project.
 
-I spent the first few weeks going through Node.js, Mongodb and Express tutorials, making sure that I really understood how they worked, and only then did I start working on projects. Recurse isn't a startup factory, you don't need to constantly be churning out some shiny new thing. It's good to set goals, and it's going to have things you want to accomplish, but a good project could be going through all of Eloquent JavaScript.
+I spent the first few weeks going through Node.js, Mongodb and Express tutorials, making sure that I really understood how they worked, and only then did I start working on projects. Recurse isn't a startup factory, you don't need to constantly be churning out some shiny new thing. It's good to set goals, and it's goood to have things you want to accomplish, but a good project could be going through all of Eloquent JavaScript.
 
-However, make sure you don't spend the entire time with your nose tucked into a tutorial. Find someone else who wants to learn the same thing. Find someone who already knows about this stuff and ask them questions if you're confused. There are people are Recurse. Use them.
+However, make sure you don't spend the entire time with your nose tucked into a tutorial. Find someone else who wants to learn the same thing. Find someone who already knows about this stuff and ask them questions if you're confused. There are people at Recurse. Use them.
 
 **2. Don't be afraid to ask questions**
 
@@ -38,25 +38,25 @@ There were several times that I was working on a "real" project, hating my life,
 
 **5. Learn to walk away**
 
-If you're staring angrily at your computer screen, slamming your keys desperately trying to fix a bug that you know would be easily fixed if you could just figure out what the stupid thing is doing wrong. Walk. Away. Get up from your seat, pace the room, grab a cup of tea, ask people if they're interested in a coffee run, anything. Just walk away. Your brain has this amazing ability to figure things out, but only if you give a chance to recuperate. You'll be amazed what comes to you after you've walked away.
+If you're staring angrily at your computer screen, slamming your keys desperately trying to fix a bug that you know would be easily fixed if you could just figure out what the stupid thing is doing wrong. Walk. Away. Get up from your seat, pace the room, grab a cup of tea, ask people if they're interested in a coffee run, anything. Just walk away. Your brain has this amazing ability to figure things out, but only if you give it a chance to recuperate. You'll be amazed what comes to you after you've walked away.
 
-**7. Talk to people!**
+**6. Talk to people!**
 
-I'm the worst at networking. I think it's silly and I find small talk painful at best. However, for the first few weeks of Recurse I made it a point to talk to as many different people as possible. It was scary, but everyone was incredibly nice, and I learned a lot about different people. Recurse is an interesting experience because everyone is "the new person", so they're all looking for someone to talk to. It's like a beautiful hand crafted artisanal friend group made specifically for you.
+I'm the worst at networking. I think it's silly and I find small talk painful at best. However, for the first few weeks of Recurse I made it a point to talk to as many different people as possible. It was scary, but everyone was incredibly open, and I learned a lot about my fellow Recursers. One of things that makes Recurse unique is that everyone is "the new person", so they're all looking for someone to talk to. It's like a beautiful hand crafted artisanal friend group made specifically for you.
 
-If you feel like you haven't really made connections with anyone immediately, give it time. Some of my best friends from Recurse I didn't start really talking to until the second half. When faced with a group of scary new people, it's easier to cling to people that are in your batch, and that's ok. Just be sure to talk to the new scary people too, because they can be equally great.
+If you feel like you haven't really made connections with anyone immediately, give it time. Some of my best friends from Recurse I didn't talk to until the second half.
 
-**8. Do things that scare the hell out of you.**
+**7. Do things that scare the hell out of you.**
 
 All of the following points lead into this: Practice being brave. 
 
-Recurse is one of the most supporting, loving, non-judgmental places I've ever been. No one's doing a "thing". No one's looking at you funny. Everyone's going to be excited when you join in and try new things. Before Recurse I had never sung a song at karaoke by myself. Ever. Not once. But the first karaoke night I decided I was going to do it because everyone else was having fun and no one cared that we weren't going to be auditioning for American Idol any time soon, and everyone cheered so loud after every song like you were the biggest rock star in the world. My voice cracked, I was scared out of my mind, but I survived. Not only did I survive, I got thoroughly addicted. The rush I got from doing it was absolutely amazing, and everyone was so supportive.
+Recurse is one of the most supporting, loving, non-judgmental environments I've ever been in. No one's doing a "thing". No one's looking at you funny. Everyone's going to be excited when you join in and try new things. Before Recurse I had never sung a song at karaoke by myself. Ever. Not once. But the first karaoke night I decided I was going to do it because everyone else was having fun and no one cared that we weren't going to be auditioning for American Idol any time soon, and everyone cheered so loud after every song that you felt like you were the biggest rock star in the world. My voice cracked, I was scared out of my mind, but I survived. Not only did I survive, I got thoroughly addicted.
 
-While this point was mostly a plug for karaoke night (please keep this tradition going!), it's mostly to highlight the importance of doing the things that scare you. Avoiding things because "you're not good at them" is silly and a fixed mindset that's going to keep you from rocking out like Christina Aguilera wishes she could. Be brave! Do things!
+While this point acts as a plug for karaoke night (please keep this tradition going!), it's mostly to highlight the importance of doing the things that scare you. Avoiding things because "you're not good at them" is silly. It's a fixed mindset that's going to keep you from rocking out like Christina Aguilera wishes she could. Be brave! Do things!
 
 **Conclusion**
 
-Recurse is amazing. You're amazing. You'd make a great pair. If you're thinking about going, you totally should. If you're still unsure, or have more questions, please don't hesitate to ask me anything. I have so much advice and stories to share. My next blog will be on the scary bits of Recurse (don't worry, they're not that scary). Until then,
+Recurse is amazing. You're amazing. You'd make a great pair. If you're thinking about going, you totally should. If you're still unsure, or have more questions, please don't hesitate to ask me anything. I have so much advice and many stories to share. My next blog will be on the scary bits of Recurse (don't worry, they're not that scary). Until then,
 
 Cheers!
 
