@@ -7,7 +7,7 @@ categories: My experiences
 excerpt: <p>Getting into coding is scary, and encouragement is an absolute necessity. Because the open source community benefits so much from helping each other and from helping new people getting involved, <a href="http://www.erikaheidi.com/blog/a-beginners-guide-to-open-source-making-your-first-contribution?utm_medium=community&utm_source=hacktoberfest&utm_campaign=digest1">they are endlessly nurturing</a>, and this is invaluable for anyone learning to code.</p>
 ---
 
-As [#Hacktober](https://hacktoberfest.digitalocean.com/) is coming to a close, I've been reflecting on my experience with open source. When I initially started learning to code, it was pretty daunting with the amount of information out there, and there's a lot of people with a lot of advice (I know because I asked just about everyone I could). One of the biggest hurdles that I ran into was knowing when I was getting past the “[hand holding honeymoon](http://www.vikingcodeschool.com/posts/why-learning-to-code-is-so-damn-hard)” phase into working on "real" projects. The “handholding honeymoon phase” occurs when you’re just starting out and beginner tutorials are walking you through carefully constructed problems with carefully constructed solutions and oh my gosh you just built something congratulations! You’ve learned the basics of coding!
+As [#Hacktober](https://hacktoberfest.digitalocean.com/) is coming to a close, I've been reflecting on my experience with open source. When I initially started learning to code, it was pretty daunting with the amount of information out there. There's a lot of people with a lot of advice (I know because I asked just about everyone I could). One of the biggest hurdles that I ran into was knowing when I was getting past the “[hand holding honeymoon](http://www.vikingcodeschool.com/posts/why-learning-to-code-is-so-damn-hard)” phase into working on "real" projects. The “handholding honeymoon phase” occurs when you’re just starting out and beginner tutorials are walking you through carefully constructed problems with carefully constructed solutions and oh my gosh you just built something congratulations! You’ve learned the basics of coding!
 
 <br />
 
@@ -15,7 +15,7 @@ As [#Hacktober](https://hacktoberfest.digitalocean.com/) is coming to a close, I
 
 What should the next steps be? There are so many tutorials out there, and so many different languages and frameworks, and new ones coming out every day. How do you begin to learn what you don't know, especially when you don't even know what you don't know? 
 
-The advice that I got over and over again was just to work on a project. Doesn't matter what, just build something. But that means coming up with an idea, and then a plan for how to build it, and then figuring out how all of the pieces fit together. That's not daunting or overwhelming at all, especially when you’re used to beginner tutorials that have the framework and design already set up, and now you have to for figure out everything that goes into making something a “real” app and you have no idea how to make user accounts or set up databases and servers and what the heck is a framework?! It was almost enough to convince me to just stick to bartending.
+The advice that I got over and over again was just to work on a project. Doesn't matter what, just build something. But that means coming up with an idea, and then a plan for how to build it, and then figuring out how all of the pieces fit together. That's not daunting or overwhelming at all, especially when you’re used to beginner tutorials that have the framework and design already set up, and now you have to figure out everything that goes into making something a “real” app and you have no idea how to make user accounts or set up databases and servers and what the heck is a framework?! It was almost enough to convince me to just stick to bartending.
 
 Thankfully I've made it past this consistently overwhelmed phase, and open source projects were a huge player in getting me through this slump.
 
@@ -27,9 +27,9 @@ I was lucky enough to have a group of coding friends who were extremely supporti
 
 All it was was string manipulation. I knew how to do that. That's not a real project. If I know how to do that that's not **real** coding.
 
-But it was. That was all it took, and like that I had made my first commit and my first pull request. I spent the rest of the day riding between a high of "I did it!" and "wait... that's it?".
+But it was. That was all it took, and just like that I had made my first commit and my first pull request. I spent the rest of the day riding between a high of "I did it!" and "wait... that's it?".
 
-And yes, that was it. Just like that I was hooked. The developers passed along any simple bugs they ran into for me to work through, and even though they might have been able to find it and fix it faster, they knew that allowing me time to sort through all of this new code, translate it, and practice fixing things was invaluable, so they happily let me do it. I gained so much confidence from being able to make positive changes to real code, and I gained a ton of experience just from working my way through a new set of code every day.
+And yes, that was it. Just like that I was hooked. The developers passed along any simple bugs they ran into for me to work through. Even though they might have been able to find it and fix it faster, they knew that allowing me time to sort through all of this new code, translate it, and practice fixing things was invaluable, so they happily let me do it. I gained so much confidence and experience from being able to make positive changes to real code every day.
 
 <br />
 

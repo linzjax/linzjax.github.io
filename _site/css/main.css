@@ -43,6 +43,9 @@ h1, h2, h3, h4, h5, h6 {
 /**
  * Links
  */
+a {
+  color: #FFFFFF; }
+
 /**
  * Blockquotes
  */
@@ -73,7 +76,6 @@ p {
 
 a {
   color: #5bc292;
-  transition: color .5s;
   text-decoration: none; }
   a:hover {
     color: #1B2022; }
@@ -135,6 +137,7 @@ a {
         text-decoration: none;
         color: #020002; }
         .home .post-list h1 a:hover {
+          transition: color .5s;
           color: #5bc292; }
     .home .post-list p {
       font-size: 1.3em;
@@ -146,6 +149,7 @@ a {
       .home .post-list .post-excerpt a {
         color: #5bc292; }
         .home .post-list .post-excerpt a:hover {
+          transition: color .5s;
           color: #020002; }
 
 .blog {
@@ -159,6 +163,7 @@ a {
       text-decoration: none;
       color: #020002; }
       .blog h1 a:hover {
+        transition: color .5s;
         color: #5bc292; }
   .blog p {
     font-size: 1.3em;
@@ -171,6 +176,7 @@ a {
     .blog .post-excerpt a {
       color: #5bc292; }
       .blog .post-excerpt a:hover {
+        transition: color .5s;
         color: #020002; }
   .blog .new-post .post-content {
     margin-bottom: 50px;
@@ -193,10 +199,10 @@ a {
     padding: 10px;
     font-family: "Old Standard TT", serif;
     color: #1B2022;
-    transition: 0.2s color;
     font-size: .9em;
     font-family: "Old Standard TT", serif; }
     .read-more div:hover {
+      transition: 0.2s color;
       background-color: #1B2022;
       color: #5bc292; }
 
@@ -222,6 +228,7 @@ a {
     text-decoration: none;
     display: inline-block; }
     .site-nav a:hover {
+      transition: color .5s;
       color: #5bc292; }
   .site-nav p {
     display: inline-block; }
@@ -238,6 +245,7 @@ a {
     text-decoration: none;
     color: #FFFFFF; }
     .post-title a:hover {
+      transition: color .5s;
       color: #5bc292; }
   .post-title h1 {
     font-size: 6em;
@@ -263,6 +271,7 @@ a {
       text-decoration: none;
       color: #020002; }
       .post h1 a:hover {
+        transition: color .5s;
         color: #5bc292; }
   .post p {
     font-size: 1.3em;
@@ -275,6 +284,7 @@ a {
     .post .post-content a {
       color: #5bc292; }
       .post .post-content a:hover {
+        transition: color .5s;
         color: #020002; }
 
 .about {
@@ -314,6 +324,7 @@ a {
       text-decoration: none;
       color: #FFFFFF; }
       .site-footer .wrapper .footer-col a:hover {
+        transition: color .5s;
         color: #5bc292; }
     .site-footer .wrapper .footer-col .icon {
       margin-right: 5px;
