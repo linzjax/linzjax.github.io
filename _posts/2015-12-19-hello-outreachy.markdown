@@ -17,7 +17,7 @@ So I've set aside my denial and decided to tell the world about my Outreachy jou
 
 As I was finishing up my batch at the Recurse Center, reality was starting to set in. If I really want to turn this hobby into a career, I have to start convincing other people (and myself) that I know what I'm doing. Outreachy seemed like a great place to start.
 
-For those that don't know, [Outreachy](https://gnome.org/outreachy/) is a project that works to help underrepresented members of the tech community get involved in open source. You get to spend three months working with one of their partner companies on a project they've outlined. Open source has been an integral part of my journey to become a developer (see my [previous post]() for more open source banner waving), and I was excited by the opportunity to continue working within the community.
+For those that don't know, [Outreachy](https://gnome.org/outreachy/) is a project that works to help underrepresented members of the tech community get involved in open source. You get to spend three months working with one of their partner companies on a project they've outlined. Open source has been an integral part of my journey to become a developer (see my [previous post](http://linzjax.github.io/my/experiences/2015/10/29/why-open-source-is-important-for-new-coders.html) for more open source banner waving), and I was excited by the opportunity to continue working within the community.
 
 So here I am, and I am so excited to be working with Cadasta! I'm thrilled to have the opportunity to combine design and development as I work with their team to rethink and redesign Field Papers' UI. Over the next few weeks I'll be blogging about my progress and musings along the way. 
 
