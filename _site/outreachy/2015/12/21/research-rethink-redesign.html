@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <div class='container'>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Research, Rethink, and Redesign</title>
+  <meta name="description" content="“Avoid pixel-pushing at all costs – your job is to solve problems. View your work through that lens at all times. […] Accurately defining the problem goes a ...">
+
+  <link href='https://fonts.googleapis.com/css?family=Over+the+Rainbow|Old+Standard+TT' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="http://linzjax.github.io/outreachy/2015/12/21/research-rethink-redesign.html">
+  <link rel="alternate" type="application/rss+xml" title="LinzJax:" href="http://linzjax.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class='banner-image'>
+    </div>
+    <nav class="site-nav">
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/blog/">Blog</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+            <div class="post-title">
+      <a  href="#">
+        <h1>Research, Rethink, and Redesign</h1>
+        </a>
+            <!-- <h1 class="post-title"></h1> -->
+        <p class="post-meta">Dec 21, 2015 • Lindsey Jacks</p>
+        <!-- <p>Front-End Developer</p>
+        <p>Potentially Coherent</p> -->
+      </div>
+    </div>
+    </a>
+</header>
+
+    <div class="page-content">
+    <div class="wrapper">
+		<div class="post">
+
+		  
+
+		  <article class="post-content">
+		    <p><strong>“Avoid pixel-pushing at all costs – your job is to solve problems. View your work through that lens at all times. […] Accurately defining the problem goes a long way towards solving it.” - <a href="http://somerandomdude.com/2012/01/10/transition-from-development-to-design/">J.P. Onori</a></strong></p>
+
+<p><br /></p>
+
+<h2 id="getting-started"><strong>Getting started</strong></h2>
+
+<p>It’s week three of my internship with Cadasta, and I have been working on a complete redesign of the UI for <a href="http://fieldpapers.org/">Field Papers</a>. Field Papers is an open source mapping tool that allows users to select areas on an atlas grid to be printed out, taken into the field, and then loaded back onto Field Papers. The concept of Field Papers is simple in theory, and it wasn’t until I started actually trying to improve it that I realized how complicated it was, but I’ll talk more about that in the next blog post (teasers!).</p>
+
+<p><strong>As I started digging into Field Papers there were a few <em>seemingly</em> simple issues that stood out to me:</strong></p>
+
+<p>1) The map was way too small to actually be able to successfully navigate the atlas grid positioning.</p>
+
+<p>2) The atlas grid movement was completely disconnected from the map movement, which was confusing.</p>
+
+<p>3) The process was broken down into three separate steps, and could be consolidated into a single page site.</p>
+
+<p>4) Adding rows and columns was complicated by the fact that the buttons ran away from you as you clicked on them.</p>
+
+<p>Following the suggestion of my mentor Ian, I focused on three ways to solve most of these problems: <strong>“demodalisation”</strong>, <strong>“big map”</strong> and <strong>“better UI interaction model”</strong>.</p>
+
+<p>Demodalization involves combining all three map composition steps onto a single page, and doing away with the “wizard” mode. Big map, rather unsurprisingly, consists of turning the current tiny map view port into a full screen map view. This will give the user much more flexibility and room to maneuver. Creating a better UI interaction model has turned out to be much more complicated and less straight forward than anticipated. But, again, I will discuss this in more detail in my next post.</p>
+
+<p>Addressing these issues needed to start with creating a full screen map display that could incorporate all possible map interactions onto a single page. Rather than jumping straight into building, I started with research, sketches and wireframes.</p>
+
+<h2 id="research"><strong>Research</strong></h2>
+
+<p>My first task was to see <a href="http://linzjax.github.io/fieldpapers/notes-page/">what other people were doing</a>.</p>
+
+<div width="100%">
+<div class="gallery-box">
+		<div class="gallery-images">
+			<div class="image">
+				<img src="http://i.imgur.com/FogukeV.png" />
+			</div>
+			<div class="image">
+				<img src="http://i.imgur.com/d4BSjNQ.png" />
+			</div>
+			<div class="image">
+				<img src="http://i.imgur.com/fIX7Fz3.png" />
+			</div>
+			<div class="image">
+				<img src="http://i.imgur.com/NIIn93o.png" />
+			</div>
+			<div class="image">
+				<img src="http://i.imgur.com/p3ICXGH.png" />
+			</div>
+			<div class="image">
+				<img src="http://i.imgur.com/aWzWT2l.png" />
+			</div>
+		</div>
+	</div>
+</div>
+<div class="gallery-lightbox hidden">
+	<div class="gallery-lightbox-image">
+		<img src="" />
+	</div>
+</div>
+
+<ul>
+  <li>[<em>Examples of other websites with large scale maps. Most of them include a large side menu.</em>]</li>
+</ul>
+
+<p>Turns out that there’s not a whole lot of variation in the world of full screen maps. Unfortunately, there can’t be. If the goals is to allow the user to interact with the map, layouts and menus should be as unobtrusive as possible. There’s no need to be clever and cute. Just get out of the way.</p>
+
+<p><strong>After examining what the current trends are, I came to a few conclusions:</strong></p>
+
+<p>Only use lightbox menus for specific purposes. <br />
+	There were a few sites that used them for every action. It turned out to be distracting and frustrating. Not only were they in the way of the map view, they didn’t allow me to quickly flip back and forth between actions.</p>
+
+<p>Icons without explanation can be more confusing that they’re worth. <br />
+	I’ve run across this in a few apps, where in attempt to be as clean and streamlined as possible they turn all of their buttons into icons. This is all well and good, but only if it’s <em>extremely clear</em> exactly what each icon represents. (I’m looking at you viscocam….)</p>
+
+<p>Placement of menus should be simple and consistent. <br />
+	Having menus along all four walls of the browser window feels cluttered, and doesn’t allow your eyes to rest. Try to keep it limited to two walls.</p>
+
+<p>Having the option to toggle whether or not the menu is visible is nice. <br />
+	However, and this goes along with the icon point, it should be clear how to trigger this interaction.</p>
+
+<p>Separate actions into different menus only if it makes sense. <br />
+	You want to make sure the separations make sense and are organized in a manner that’s not confusing to the user.</p>
+
+<p>If you’re ever uncertain, include a help section. <br />
+	If you think any of the interaction or icons might be confusing, include a help section. Heck, even if you don’t think it’s confusing, <em>include a help section</em>.</p>
+
+<h2 id="rethink"><strong>Rethink</strong></h2>
+
+<p>After my initial research and with these notes in mind, I settled down to do a quick 20 minute sketch session. The purpose of this exercise was to get as many ideas as I could in the allotted time, and to not stop until the timer was done.</p>
+
+<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:60%; width:-webkit-calc(60% - 2px); width:calc(60% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:47.4074074074% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/_FByZCy9GR/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Sketchy sketch is sketchy. #outreachy #noideawhatimdoing</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Linz Jax (@linzjaxx) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-12-09T16:56:40+00:00">Dec 9, 2015 at 8:56am PST</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<p><br /></p>
+
+<p>This exercise prevented me from spending much time focusing on any one idea, which prevented me from becoming attached and letting that influence all of my subsequent decisions. It also prevented me from worrying about <em>completing</em> each design idea. That way, when I started building wireframes I could choose the best options out of a pile of ideas and <em>then</em> allow myself to finish them. A lot of the sketches ended up looking the same, but they still fed ideas once I actually started building out the models. There aren’t many options when it comes to being unobtrusive, and that’s ok.</p>
+
+<p>During this process, I also brainstormed different ways each interaction could be designed. When does a dropdown vs. buttons make sense? Are there ways that tasks can be separated into different actions (map adjustment actions vs. saving and note-taking actions).</p>
+
+<p><img src="https://rippedshakespear.mybalsamiq.com/projects/testing/zoom%20one.jpeg?version=3&amp;etag=Z.sD2JZ1pxArJw4Q9iBMzMSqTlptAQHg" alt="interactions" /></p>
+
+<h2 id="redesign"><strong>Redesign</strong></h2>
+
+<p>Once I was done with that I moved onto wireframes. I used <a href="https://balsamiq.com/">Balsamiq</a> to build my <a href="https://rippedshakespear.mybalsamiq.com/projects/testing/prototype/large%20left%20menue?key=a58b5f9011225b47db50f4fcf34c7cffdd2941cc">wireframes</a>, and oh my gosh it was magical. Incredibly easy to use, and little to no learning curve. Since this was the first time I had really worked with a wireframing tool, I started with the initially suggested design (with a few tweaks of my own). After that, I tried to implement as many different designs as I could, and ended up with about eight. I tried to make several that were very different, as well as a few I knew just straight up wouldn’t work. I wanted to build these anyway just to see <em>why</em> it wouldn’t work and what it was about these designs that made me uncomfortable.</p>
+
+<p><strong>These are a few examples of uncomfortable designs:</strong></p>
+
+<div class="gallery-box">
+	<div class="gallery-images">
+		<div class="image">
+			<img src="https://rippedshakespear.mybalsamiq.com/projects/testing/round%20the%20outside%20menus.jpeg?version=2&amp;etag=BeCO0B5dMODWGAMxwP9YXg_Gv5hIe5fm&amp;key=a58b5f9011225b47db50f4fcf34c7cffdd2941cc" />
+		</div>
+		<div class="image">
+			<img src="https://rippedshakespear.mybalsamiq.com/projects/testing/weird%20top%20menu.jpeg?version=4&amp;etag=qp3WHKbUxv50L.Fy1vIjOgxBAyOiW.CN&amp;key=a58b5f9011225b47db50f4fcf34c7cffdd2941cc" />
+		</div>
+		<div class="image">
+			<img src="https://rippedshakespear.mybalsamiq.com/projects/testing/Top%20banner%20and%20%5Blightbox%5D.jpeg?version=8&amp;etag=.cmR5zy86tMTcZVMEWUMU9hHFpLSE.tF&amp;key=a58b5f9011225b47db50f4fcf34c7cffdd2941cc" />
+		</div>
+	</div>
+</div>
+
+<p><strong>Image one</strong>: You can’t see anything because the text lacks a background. Also, by placing the menu all the way around the edges your eyes are never given the chance to rest.</p>
+
+<p><strong>Image two</strong>: The design just feels old, and while the positioning of the options are similar to the original Field Papers, it doesn’t feel like an improvement.</p>
+
+<p><strong>Image three</strong>: While initially I liked this design, it still presents the problem of tasks being separated a bit too harshly. It also doesn’t allow the user to write notes until they’re <em>done</em> with the map, which is not ideal.</p>
+
+<p>After pushing myself to come up with as many ideas as possible, I was then able to narrow down my selection to three, and have a much better idea of <em>why</em> I preferred these designs over others. These were my final three:</p>
+
+<p>This first one combines all of the task into one side menu. Everything is in one place, easily found, and always present. 
+<img width="100%" src="https://rippedshakespear.mybalsamiq.com/projects/testing/large%20left%20menue.jpeg?version=7&amp;etag=NIJfjEYtJfOwh0jkwcmrRA_p04lKOc.A&amp;key=a58b5f9011225b47db50f4fcf34c7cffdd2941cc" /></p>
+
+<p>This second one separates all of the actions into their own icon, allowing the user to think of them as different components to be tweaked on at a time. Stays as unobtrusive as possible.
+<img width="100%" src="https://rippedshakespear.mybalsamiq.com/projects/testing/umap%20esqu%20%5Bpaper%5D.jpeg?version=3&amp;etag=KSrrkEWdLWvb368g6.7NMTpzL7VUwKdn&amp;key=a58b5f9011225b47db50f4fcf34c7cffdd2941cc" /></p>
+
+<p>This third one combines the first two ideas. It separates the actions into two categories, and provides a more solid menu to navigate. 
+<img width="100%" src="https://rippedshakespear.mybalsamiq.com/projects/testing/Left%20button%20right%20menu%20%5Bgrid%5D.jpeg?version=4&amp;etag=hwonxcPIL_sIkJgerw8MkR3msBQ3iWrk&amp;key=a58b5f9011225b47db50f4fcf34c7cffdd2941cc" /></p>
+
+<p>After talking it over with the Cadasta team, we ended up deciding on the first one. It ensures that all of the options are present, and completely removes the issue of modalization that was so problematic with the initial Field Papers.</p>
+
+<h2 id="final-thoughts"><strong>Final thoughts</strong></h2>
+
+<p>I was glad that I had the time to spend on going through this process. It allowed me to really think through all of the decisions I was making, rather than just running with whatever idea popped into my head first. Also, designing out in the open was valuable because it prevented me from developing this idea that these designs were <em>mine</em> and <em>precious</em> and <em>private</em>. It allowed me to get comfortable with other people’s thoughts and opinions, and my designs only improved as a result.</p>
+
+<p>So on to the next step! I am currently working on building a stand alone version of the tool to see how it actually behaves. Up next: The messy reality of UI.</p>
+
+<p>Until next time,</p>
+
+<p>Cheers!</p>
+
+
+		  </article>
+
+		</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col">
+      <p class="footer-heading">Lindsey Jacks</p>
+      
+      <a href="https://github.com/linzjax">
+        <span class="icon  icon--github">
+          <svg viewBox="0 0 16 16">
+            <path class='icon' fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+          </svg>
+        </span>
+      </a>
+      
+      
+        <a href="https://twitter.com/linzjax">
+          <span class="icon  icon--twitter">
+            <svg viewBox="0 0 16 16">
+              <path class="icon" fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+            </svg>
+          </span>
+          </a>
+        
+        <a href="mailto:linzjax@gmail.com">linzjax@gmail.com</a>
+    </div>
+
+    
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">A collection of all of my thoughts, notes, and musings in one jumbled incoherent mess.
+</p>
+      </div>
+    </div>
+    <script type="text/javascript" src="/assets/javascripts/lightbox.js"></script>
+  </div>
+  
+</footer>
+
+
+  </body>
+</div>
+</html>

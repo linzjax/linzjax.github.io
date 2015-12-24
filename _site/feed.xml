@@ -6,9 +6,169 @@
 </description>
     <link>http://linzjax.github.io/</link>
     <atom:link href="http://linzjax.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 10 Dec 2015 12:32:44 -0500</pubDate>
-    <lastBuildDate>Thu, 10 Dec 2015 12:32:44 -0500</lastBuildDate>
+    <pubDate>Wed, 23 Dec 2015 16:40:49 -0600</pubDate>
+    <lastBuildDate>Wed, 23 Dec 2015 16:40:49 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Research, Rethink, and Redesign</title>
+        <description>&lt;p&gt;&lt;strong&gt;“Avoid pixel-pushing at all costs – your job is to solve problems. View your work through that lens at all times. […] Accurately defining the problem goes a long way towards solving it.” - &lt;a href=&quot;http://somerandomdude.com/2012/01/10/transition-from-development-to-design/&quot;&gt;J.P. Onori&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-started&quot;&gt;&lt;strong&gt;Getting started&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;It’s week three of my internship with Cadasta, and I have been working on a complete redesign of the UI for &lt;a href=&quot;http://fieldpapers.org/&quot;&gt;Field Papers&lt;/a&gt;. Field Papers is an open source mapping tool that allows users to select areas on an atlas grid to be printed out, taken into the field, and then loaded back onto Field Papers. The concept of Field Papers is simple in theory, and it wasn’t until I started actually trying to improve it that I realized how complicated it was, but I’ll talk more about that in the next blog post (teasers!).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;As I started digging into Field Papers there were a few &lt;em&gt;seemingly&lt;/em&gt; simple issues that stood out to me:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;1) The map was way too small to actually be able to successfully navigate the atlas grid positioning.&lt;/p&gt;
+
+&lt;p&gt;2) The atlas grid movement was completely disconnected from the map movement, which was confusing.&lt;/p&gt;
+
+&lt;p&gt;3) The process was broken down into three separate steps, and could be consolidated into a single page site.&lt;/p&gt;
+
+&lt;p&gt;4) Adding rows and columns was complicated by the fact that the buttons ran away from you as you clicked on them.&lt;/p&gt;
+
+&lt;p&gt;Following the suggestion of my mentor Ian, I focused on three ways to solve most of these problems: &lt;strong&gt;“demodalisation”&lt;/strong&gt;, &lt;strong&gt;“big map”&lt;/strong&gt; and &lt;strong&gt;“better UI interaction model”&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Demodalization involves combining all three map composition steps onto a single page, and doing away with the “wizard” mode. Big map, rather unsurprisingly, consists of turning the current tiny map view port into a full screen map view. This will give the user much more flexibility and room to maneuver. Creating a better UI interaction model has turned out to be much more complicated and less straight forward than anticipated. But, again, I will discuss this in more detail in my next post.&lt;/p&gt;
+
+&lt;p&gt;Addressing these issues needed to start with creating a full screen map display that could incorporate all possible map interactions onto a single page. Rather than jumping straight into building, I started with research, sketches and wireframes.&lt;/p&gt;
+
+&lt;h2 id=&quot;research&quot;&gt;&lt;strong&gt;Research&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;My first task was to see &lt;a href=&quot;http://linzjax.github.io/fieldpapers/notes-page/&quot;&gt;what other people were doing&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div width=&quot;100%&quot;&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+		&lt;div class=&quot;gallery-images&quot;&gt;
+			&lt;div class=&quot;image&quot;&gt;
+				&lt;img src=&quot;http://i.imgur.com/FogukeV.png&quot; /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;image&quot;&gt;
+				&lt;img src=&quot;http://i.imgur.com/d4BSjNQ.png&quot; /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;image&quot;&gt;
+				&lt;img src=&quot;http://i.imgur.com/fIX7Fz3.png&quot; /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;image&quot;&gt;
+				&lt;img src=&quot;http://i.imgur.com/NIIn93o.png&quot; /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;image&quot;&gt;
+				&lt;img src=&quot;http://i.imgur.com/p3ICXGH.png&quot; /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;image&quot;&gt;
+				&lt;img src=&quot;http://i.imgur.com/aWzWT2l.png&quot; /&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gallery-lightbox hidden&quot;&gt;
+	&lt;div class=&quot;gallery-lightbox-image&quot;&gt;
+		&lt;img src=&quot;&quot; /&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[&lt;em&gt;Examples of other websites with large scale maps. Most of them include a large side menu.&lt;/em&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Turns out that there’s not a whole lot of variation in the world of full screen maps. Unfortunately, there can’t be. If the goals is to allow the user to interact with the map, layouts and menus should be as unobtrusive as possible. There’s no need to be clever and cute. Just get out of the way.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;After examining what the current trends are, I came to a few conclusions:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Only use lightbox menus for specific purposes. &lt;br /&gt;
+	There were a few sites that used them for every action. It turned out to be distracting and frustrating. Not only were they in the way of the map view, they didn’t allow me to quickly flip back and forth between actions.&lt;/p&gt;
+
+&lt;p&gt;Icons without explanation can be more confusing that they’re worth. &lt;br /&gt;
+	I’ve run across this in a few apps, where in attempt to be as clean and streamlined as possible they turn all of their buttons into icons. This is all well and good, but only if it’s &lt;em&gt;extremely clear&lt;/em&gt; exactly what each icon represents. (I’m looking at you viscocam….)&lt;/p&gt;
+
+&lt;p&gt;Placement of menus should be simple and consistent. &lt;br /&gt;
+	Having menus along all four walls of the browser window feels cluttered, and doesn’t allow your eyes to rest. Try to keep it limited to two walls.&lt;/p&gt;
+
+&lt;p&gt;Having the option to toggle whether or not the menu is visible is nice. &lt;br /&gt;
+	However, and this goes along with the icon point, it should be clear how to trigger this interaction.&lt;/p&gt;
+
+&lt;p&gt;Separate actions into different menus only if it makes sense. &lt;br /&gt;
+	You want to make sure the separations make sense and are organized in a manner that’s not confusing to the user.&lt;/p&gt;
+
+&lt;p&gt;If you’re ever uncertain, include a help section. &lt;br /&gt;
+	If you think any of the interaction or icons might be confusing, include a help section. Heck, even if you don’t think it’s confusing, &lt;em&gt;include a help section&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;rethink&quot;&gt;&lt;strong&gt;Rethink&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;After my initial research and with these notes in mind, I settled down to do a quick 20 minute sketch session. The purpose of this exercise was to get as many ideas as I could in the allotted time, and to not stop until the timer was done.&lt;/p&gt;
+
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-version=&quot;6&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:60%; width:-webkit-calc(60% - 2px); width:calc(60% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:47.4074074074% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/_FByZCy9GR/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;Sketchy sketch is sketchy. #outreachy #noideawhatimdoing&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;A photo posted by Linz Jax (@linzjaxx) on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-12-09T16:56:40+00:00&quot;&gt;Dec 9, 2015 at 8:56am PST&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;This exercise prevented me from spending much time focusing on any one idea, which prevented me from becoming attached and letting that influence all of my subsequent decisions. It also prevented me from worrying about &lt;em&gt;completing&lt;/em&gt; each design idea. That way, when I started building wireframes I could choose the best options out of a pile of ideas and &lt;em&gt;then&lt;/em&gt; allow myself to finish them. A lot of the sketches ended up looking the same, but they still fed ideas once I actually started building out the models. There aren’t many options when it comes to being unobtrusive, and that’s ok.&lt;/p&gt;
+
+&lt;p&gt;During this process, I also brainstormed different ways each interaction could be designed. When does a dropdown vs. buttons make sense? Are there ways that tasks can be separated into different actions (map adjustment actions vs. saving and note-taking actions).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://rippedshakespear.mybalsamiq.com/projects/testing/zoom%20one.jpeg?version=3&amp;amp;etag=Z.sD2JZ1pxArJw4Q9iBMzMSqTlptAQHg&quot; alt=&quot;interactions&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;redesign&quot;&gt;&lt;strong&gt;Redesign&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Once I was done with that I moved onto wireframes. I used &lt;a href=&quot;https://balsamiq.com/&quot;&gt;Balsamiq&lt;/a&gt; to build my &lt;a href=&quot;https://rippedshakespear.mybalsamiq.com/projects/testing/prototype/large%20left%20menue?key=a58b5f9011225b47db50f4fcf34c7cffdd2941cc&quot;&gt;wireframes&lt;/a&gt;, and oh my gosh it was magical. Incredibly easy to use, and little to no learning curve. Since this was the first time I had really worked with a wireframing tool, I started with the initially suggested design (with a few tweaks of my own). After that, I tried to implement as many different designs as I could, and ended up with about eight. I tried to make several that were very different, as well as a few I knew just straight up wouldn’t work. I wanted to build these anyway just to see &lt;em&gt;why&lt;/em&gt; it wouldn’t work and what it was about these designs that made me uncomfortable.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;These are a few examples of uncomfortable designs:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;gallery-box&quot;&gt;
+	&lt;div class=&quot;gallery-images&quot;&gt;
+		&lt;div class=&quot;image&quot;&gt;
+			&lt;img src=&quot;https://rippedshakespear.mybalsamiq.com/projects/testing/round%20the%20outside%20menus.jpeg?version=2&amp;amp;etag=BeCO0B5dMODWGAMxwP9YXg_Gv5hIe5fm&amp;amp;key=a58b5f9011225b47db50f4fcf34c7cffdd2941cc&quot; /&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;image&quot;&gt;
+			&lt;img src=&quot;https://rippedshakespear.mybalsamiq.com/projects/testing/weird%20top%20menu.jpeg?version=4&amp;amp;etag=qp3WHKbUxv50L.Fy1vIjOgxBAyOiW.CN&amp;amp;key=a58b5f9011225b47db50f4fcf34c7cffdd2941cc&quot; /&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;image&quot;&gt;
+			&lt;img src=&quot;https://rippedshakespear.mybalsamiq.com/projects/testing/Top%20banner%20and%20%5Blightbox%5D.jpeg?version=8&amp;amp;etag=.cmR5zy86tMTcZVMEWUMU9hHFpLSE.tF&amp;amp;key=a58b5f9011225b47db50f4fcf34c7cffdd2941cc&quot; /&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Image one&lt;/strong&gt;: You can’t see anything because the text lacks a background. Also, by placing the menu all the way around the edges your eyes are never given the chance to rest.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Image two&lt;/strong&gt;: The design just feels old, and while the positioning of the options are similar to the original Field Papers, it doesn’t feel like an improvement.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Image three&lt;/strong&gt;: While initially I liked this design, it still presents the problem of tasks being separated a bit too harshly. It also doesn’t allow the user to write notes until they’re &lt;em&gt;done&lt;/em&gt; with the map, which is not ideal.&lt;/p&gt;
+
+&lt;p&gt;After pushing myself to come up with as many ideas as possible, I was then able to narrow down my selection to three, and have a much better idea of &lt;em&gt;why&lt;/em&gt; I preferred these designs over others. These were my final three:&lt;/p&gt;
+
+&lt;p&gt;This first one combines all of the task into one side menu. Everything is in one place, easily found, and always present. 
+&lt;img width=&quot;100%&quot; src=&quot;https://rippedshakespear.mybalsamiq.com/projects/testing/large%20left%20menue.jpeg?version=7&amp;amp;etag=NIJfjEYtJfOwh0jkwcmrRA_p04lKOc.A&amp;amp;key=a58b5f9011225b47db50f4fcf34c7cffdd2941cc&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This second one separates all of the actions into their own icon, allowing the user to think of them as different components to be tweaked on at a time. Stays as unobtrusive as possible.
+&lt;img width=&quot;100%&quot; src=&quot;https://rippedshakespear.mybalsamiq.com/projects/testing/umap%20esqu%20%5Bpaper%5D.jpeg?version=3&amp;amp;etag=KSrrkEWdLWvb368g6.7NMTpzL7VUwKdn&amp;amp;key=a58b5f9011225b47db50f4fcf34c7cffdd2941cc&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This third one combines the first two ideas. It separates the actions into two categories, and provides a more solid menu to navigate. 
+&lt;img width=&quot;100%&quot; src=&quot;https://rippedshakespear.mybalsamiq.com/projects/testing/Left%20button%20right%20menu%20%5Bgrid%5D.jpeg?version=4&amp;amp;etag=hwonxcPIL_sIkJgerw8MkR3msBQ3iWrk&amp;amp;key=a58b5f9011225b47db50f4fcf34c7cffdd2941cc&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After talking it over with the Cadasta team, we ended up deciding on the first one. It ensures that all of the options are present, and completely removes the issue of modalization that was so problematic with the initial Field Papers.&lt;/p&gt;
+
+&lt;h2 id=&quot;final-thoughts&quot;&gt;&lt;strong&gt;Final thoughts&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;I was glad that I had the time to spend on going through this process. It allowed me to really think through all of the decisions I was making, rather than just running with whatever idea popped into my head first. Also, designing out in the open was valuable because it prevented me from developing this idea that these designs were &lt;em&gt;mine&lt;/em&gt; and &lt;em&gt;precious&lt;/em&gt; and &lt;em&gt;private&lt;/em&gt;. It allowed me to get comfortable with other people’s thoughts and opinions, and my designs only improved as a result.&lt;/p&gt;
+
+&lt;p&gt;So on to the next step! I am currently working on building a stand alone version of the tool to see how it actually behaves. Up next: The messy reality of UI.&lt;/p&gt;
+
+&lt;p&gt;Until next time,&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 21 Dec 2015 09:52:09 -0600</pubDate>
+        <link>http://linzjax.github.io/outreachy/2015/12/21/research-rethink-redesign.html</link>
+        <guid isPermaLink="true">http://linzjax.github.io/outreachy/2015/12/21/research-rethink-redesign.html</guid>
+        
+        
+        <category>outreachy</category>
+        
+      </item>
     
       <item>
         <title>Hello Outreachy</title>
@@ -22,7 +182,7 @@
 
 &lt;p&gt;As I was finishing up my batch at the Recurse Center, reality was starting to set in. If I really want to turn this hobby into a career, I have to start convincing other people (and myself) that I know what I’m doing. Outreachy seemed like a great place to start.&lt;/p&gt;
 
-&lt;p&gt;For those that don’t know, &lt;a href=&quot;https://gnome.org/outreachy/&quot;&gt;Outreachy&lt;/a&gt; is a project that works to help underrepresented members of the tech community get involved in open source. You get to spend three months working with one of their partner companies on a project they’ve outlined. Open source has been an integral part of my journey to become a developer (see my &lt;a href=&quot;&quot;&gt;previous post&lt;/a&gt; for more open source banner waving), and I was excited by the opportunity to continue working within the community.&lt;/p&gt;
+&lt;p&gt;For those that don’t know, &lt;a href=&quot;https://gnome.org/outreachy/&quot;&gt;Outreachy&lt;/a&gt; is a project that works to help underrepresented members of the tech community get involved in open source. You get to spend three months working with one of their partner companies on a project they’ve outlined. Open source has been an integral part of my journey to become a developer (see my &lt;a href=&quot;http://linzjax.github.io/my/experiences/2015/10/29/why-open-source-is-important-for-new-coders.html&quot;&gt;previous post&lt;/a&gt; for more open source banner waving), and I was excited by the opportunity to continue working within the community.&lt;/p&gt;
 
 &lt;p&gt;So here I am, and I am so excited to be working with Cadasta! I’m thrilled to have the opportunity to combine design and development as I work with their team to rethink and redesign Field Papers’ UI. Over the next few weeks I’ll be blogging about my progress and musings along the way.&lt;/p&gt;
 
@@ -30,7 +190,7 @@
 
 &lt;p&gt;Until next time!&lt;/p&gt;
 </description>
-        <pubDate>Thu, 10 Dec 2015 07:09:09 -0500</pubDate>
+        <pubDate>Thu, 10 Dec 2015 06:09:09 -0600</pubDate>
         <link>http://linzjax.github.io/outreachy/2015/12/10/hello-outreachy.html</link>
         <guid isPermaLink="true">http://linzjax.github.io/outreachy/2015/12/10/hello-outreachy.html</guid>
         
@@ -112,7 +272,7 @@
 &lt;p&gt;Cheers!&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 11 Nov 2015 13:30:09 -0500</pubDate>
+        <pubDate>Wed, 11 Nov 2015 12:30:09 -0600</pubDate>
         <link>http://linzjax.github.io/my/experiences/2015/11/11/reflections-on-recurse-center.html</link>
         <guid isPermaLink="true">http://linzjax.github.io/my/experiences/2015/11/11/reflections-on-recurse-center.html</guid>
         
@@ -181,7 +341,7 @@
 
 &lt;p&gt;I know that #Hacktoberfest is coming to an end, but that doesn’t mean that you can’t still contribute to open source projects. It’s a never ending series of challenges to help you practice and get better, with people there to help you along the way, &lt;a href=&quot;https://guides.github.com/activities/contributing-to-open-source/?utm_medium=community&amp;amp;utm_source=hacktoberfest&amp;amp;utm_campaign=digest1&quot;&gt;so get started&lt;/a&gt;!&lt;/p&gt;
 </description>
-        <pubDate>Thu, 29 Oct 2015 11:52:09 -0400</pubDate>
+        <pubDate>Thu, 29 Oct 2015 10:52:09 -0500</pubDate>
         <link>http://linzjax.github.io/my/experiences/2015/10/29/why-open-source-is-important-for-new-coders.html</link>
         <guid isPermaLink="true">http://linzjax.github.io/my/experiences/2015/10/29/why-open-source-is-important-for-new-coders.html</guid>
         
@@ -298,7 +458,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 &lt;p&gt;and you’re ready to go!&lt;/p&gt;
 
 </description>
-        <pubDate>Mon, 05 Oct 2015 11:52:09 -0400</pubDate>
+        <pubDate>Mon, 05 Oct 2015 10:52:09 -0500</pubDate>
         <link>http://linzjax.github.io/how-to/2015/10/05/making-virutalenvwrapper-stick-around.html</link>
         <guid isPermaLink="true">http://linzjax.github.io/how-to/2015/10/05/making-virutalenvwrapper-stick-around.html</guid>
         
@@ -313,7 +473,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 &lt;p&gt;We’ll see what happens. In the meantime, pardon my mess.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 01 Sep 2015 11:52:09 -0400</pubDate>
+        <pubDate>Tue, 01 Sep 2015 10:52:09 -0500</pubDate>
         <link>http://linzjax.github.io/jekyll/update/2015/09/01/Getting-set-up.html</link>
         <guid isPermaLink="true">http://linzjax.github.io/jekyll/update/2015/09/01/Getting-set-up.html</guid>
         
