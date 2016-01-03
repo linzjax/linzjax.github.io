@@ -195,9 +195,7 @@ a {
 .blog {
   display: flex;
   width: 70%;
-  margin: 0 auto;
-  margin-top: 150px;
-  padding-top: 150px; }
+  margin: 0 auto; }
   .blog h1 {
     text-align: center;
     font-size: 3em; }
