@@ -83,7 +83,7 @@ a {
 
 .site-header {
   position: relative;
-  height: 600px;
+  height: 400px;
   width: 100%; }
 
 .banner-image {
@@ -91,7 +91,7 @@ a {
   background-size: cover;
   position: fixed;
   width: 100%;
-  height: 600px;
+  height: 400px;
   top: -10px;
   left: 0;
   z-index: -1; }
@@ -99,7 +99,6 @@ a {
 .title {
   width: 80%;
   margin: auto;
-  margin-top: 150px;
   margin-bottom: 0;
   text-align: center;
   position: absolute;
@@ -150,29 +149,46 @@ a {
 
 .home {
   display: flex;
-  width: 70%;
+  flex-flow: row;
+  flex-flow: space-between;
+  width: 90%;
   margin: 0 auto; }
-  .home .post-list {
-    width: 100%; }
-    .home .post-list h1 {
-      text-align: center;
-      font-size: 3em; }
-      .home .post-list h1 a {
+  .home .home-social {
+    width: 30%;
+    order: 2;
+    margin: 0 auto;
+    padding: 0 auto; }
+    .home .home-social .home-social-insta {
+      padding: 10px;
+      text-align: right; }
+      .home .home-social .home-social-insta p {
+        padding-bottom: 0;
+        margin-bottom: 0; }
+  .home .home-posts {
+    order: 1;
+    width: 70%; }
+    .home .home-posts h1 {
+      border-bottom: solid #020002 2px; }
+    .home .home-posts .post-list h1 {
+      text-align: left;
+      font-size: 2em;
+      border-bottom: none; }
+      .home .home-posts .post-list h1 a {
         text-decoration: none;
         color: #020002; }
-        .home .post-list h1 a:hover {
+        .home .home-posts .post-list h1 a:hover {
           transition: color .5s;
           color: #5bc292; }
-    .home .post-list p {
+    .home .home-posts .post-list p {
       font-size: 1.3em;
       color: #1B2022; }
-    .home .post-list .post-excerpt {
+    .home .home-posts .post-list .post-excerpt {
       margin-bottom: 50px;
       padding-bottom: 50px;
       color: #1B2022; }
-      .home .post-list .post-excerpt a {
+      .home .home-posts .post-list .post-excerpt a {
         color: #5bc292; }
-        .home .post-list .post-excerpt a:hover {
+        .home .home-posts .post-list .post-excerpt a:hover {
           transition: color .5s;
           color: #020002; }
 
