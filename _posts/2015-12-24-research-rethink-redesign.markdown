@@ -4,6 +4,7 @@ title:  "Research, Rethink, and Redesign"
 date:   2015-12-24 13:33:09
 author: Lindsey Jacks
 categories: outreachy
+excerpt: <p>It's week three of my internship with Cadasta, and I have been working on a complete redesign of the UI for <a href="http://fieldpapers.org/">Field Papers</a>. This is a complete breakdown of my research and wireframing phase.</p>
 ---
 
 **"Avoid pixel-pushing at all costs – your job is to solve problems. View your work through that lens at all times. [...] Accurately defining the problem goes a long way towards solving it." - [J.P. Onori](http://somerandomdude.com/2012/01/10/transition-from-development-to-design/)**

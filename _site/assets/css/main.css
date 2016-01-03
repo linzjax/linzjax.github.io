@@ -151,8 +151,11 @@ a {
   display: flex;
   flex-flow: row;
   flex-flow: space-between;
+  flex-flow: wrap;
   width: 90%;
   margin: 0 auto; }
+  .home h1 {
+    border-bottom: solid #020002 2px; }
   .home .home-social {
     width: 30%;
     order: 2;
@@ -167,8 +170,6 @@ a {
   .home .home-posts {
     order: 1;
     width: 70%; }
-    .home .home-posts h1 {
-      border-bottom: solid #020002 2px; }
     .home .home-posts .post-list h1 {
       text-align: left;
       font-size: 2em;
@@ -183,21 +184,22 @@ a {
       font-size: 1.3em;
       color: #1B2022; }
     .home .home-posts .post-list .post-excerpt {
-      margin-bottom: 50px;
-      padding-bottom: 50px;
       color: #1B2022; }
       .home .home-posts .post-list .post-excerpt a {
         color: #5bc292; }
         .home .home-posts .post-list .post-excerpt a:hover {
           transition: color .5s;
           color: #020002; }
+  .home .home-projects {
+    width: 70%;
+    order: 3; }
 
 .blog {
   display: flex;
   width: 70%;
   margin: 0 auto; }
   .blog h1 {
-    text-align: center;
+    text-align: left;
     font-size: 3em; }
     .blog h1 a {
       text-decoration: none;
@@ -225,16 +227,13 @@ a {
 
 .read-more {
   width: 100%;
-  padding: 0 auto;
-  position: relative;
-  margin-bottom: 100px; }
+  position: relative; }
   .read-more div {
     position: absolute;
     background-color: #FFFFFF;
     border: 1px solid #020002;
     border-radius: 2px;
     margin-top: 15px;
-    left: 40%;
     transition: 0.2s background-color;
     padding: 10px;
     font-family: "Old Standard TT", serif;

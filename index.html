@@ -28,7 +28,7 @@ layout: default
       <div class="home-posts">
         <h1>Recent Posts</h1>
         <ul class="post-list">
-            {% for post in site.posts%}
+            {% for post in site.posts limit: 2%}
             <div class='new-post'>
               <li>
                 <header class="post-header">
@@ -40,11 +40,15 @@ layout: default
 
                 <article class="post-excerpt">
                    {{ post.excerpt }}
-                   <div class="read-more"><a href='{{post.url | prepend: site.baseurl }}'><div>READ MORE</div></a></div>
+                   <a href='{{post.url | prepend: site.baseurl }}'>...</a>
                 </article>
 
               </li>
           </div>
             {% endfor %}
           </ul>
+        </div>
+        <div class="home-projects">
+          <h1>Current Projects</h1>
+          <p>Coming soon...</p>
         </div>

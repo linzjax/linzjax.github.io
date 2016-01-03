@@ -113,8 +113,13 @@ a {
     display: flex;
     flex-flow: row;
     flex-flow: space-between;
+    flex-flow: wrap;
     width: 90%;
     margin: 0 auto;
+
+    h1 {
+        border-bottom: solid $darkest-color 2px;
+    }
 
     .home-social {
         width: 30%;
@@ -124,8 +129,6 @@ a {
 
         .home-social-insta {
             padding: 10px;
-            // border: solid grey 2px;
-            // border-radius: 5px;
             text-align: right;
             p {
                 padding-bottom: 0;
@@ -138,9 +141,7 @@ a {
         order: 1;
         width: 70%;
 
-        h1 {
-            border-bottom: solid $darkest-color 2px;
-        }
+        
 
         .post-list {
             h1 {
@@ -166,9 +167,6 @@ a {
             }
 
             .post-excerpt {
-                //border-bottom: $darkest-color 1px solid;
-                margin-bottom: 50px;
-                padding-bottom: 50px;
                 color: $font-color;
 
                 a {
@@ -183,6 +181,11 @@ a {
         }
     }
 
+    .home-projects {
+        width: 70%;
+        order: 3;
+    }
+
 }
 
 .blog {
@@ -192,7 +195,7 @@ a {
     
 
     h1 {
-        text-align: center;
+        text-align: left;
         font-size: 3em;
 
         a {
@@ -242,9 +245,7 @@ a {
 
 .read-more {
     width: 100%;
-    padding: 0 auto;
     position: relative;
-    margin-bottom: 100px;
     
     div {
         position: absolute;
@@ -252,7 +253,6 @@ a {
         border: 1px solid $darkest-color;
         border-radius: 2px;
         margin-top: 15px;
-        left: 40%;
         transition: 0.2s background-color;
         padding: 10px;
         font-family: $base-font-family;
