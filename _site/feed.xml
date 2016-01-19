@@ -6,9 +6,9 @@
 </description>
     <link>http://linzjax.github.io/</link>
     <atom:link href="http://linzjax.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Jan 2016 11:45:18 -0500</pubDate>
-    <lastBuildDate>Mon, 18 Jan 2016 11:45:18 -0500</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <pubDate>Tue, 19 Jan 2016 13:23:09 -0500</pubDate>
+    <lastBuildDate>Tue, 19 Jan 2016 13:23:09 -0500</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Outreachy and the messy reality of UI</title>
@@ -368,7 +368,7 @@
         <guid isPermaLink="true">http://linzjax.github.io/my/experiences/2015/11/11/reflections-on-recurse-center.html</guid>
         
         
-        <category>my</category>
+        <category>My</category>
         
         <category>experiences</category>
         
@@ -437,7 +437,7 @@
         <guid isPermaLink="true">http://linzjax.github.io/my/experiences/2015/10/29/why-open-source-is-important-for-new-coders.html</guid>
         
         
-        <category>my</category>
+        <category>My</category>
         
         <category>experiences</category>
         
@@ -449,23 +449,23 @@
 
 &lt;p&gt;They allow you to install all of your required packages for one project without overriding your globally installed packages. If you want package version 3.0.3 for one project, and package version 2.7.4 for another, virtual environments are your friend.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://virtualenv.readthedocs.org/en/latest/&quot;&gt;virtualenv&lt;/a&gt; does this for your python environments. It creates an environment with its own installation directories, separate from that of your usr/local/bin, so anything that you &lt;code&gt;pip install&lt;/code&gt; inside of a virtualenv, will only affect that project.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://virtualenv.readthedocs.org/en/latest/&quot;&gt;virtualenv&lt;/a&gt; does this for your python environments. It creates an environment with its own installation directories, separate from that of your usr/local/bin, so anything that you &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install&lt;/code&gt; inside of a virtualenv, will only affect that project.&lt;/p&gt;
 
 &lt;p&gt;To install virtualenv, open up your terminal and type in:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt; $ pip install virtualenv &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ pip install virtualenv &lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;To create a virutalenv instance, switch into your project directory:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt; $ cd my_project_folder &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ cd my_project_folder &lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;and make a new virtual environment:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt; $ virtualenv what_you_want_to_call_it &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ virtualenv what_you_want_to_call_it &lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Now, in order to start your virtualenv, you’ll need to start it up using &lt;code&gt;source&lt;/code&gt;. &lt;a href=&quot;http://bash.cyberciti.biz/guide/Source_command&quot;&gt;Source&lt;/a&gt; activates a series of commands that only apply to that one terminal shell instance, and will end as soon as you close that shell. Which means that if you want to work in a virtualenv, you’ll need to run:&lt;/p&gt;
+&lt;p&gt;Now, in order to start your virtualenv, you’ll need to start it up using &lt;code class=&quot;highlighter-rouge&quot;&gt;source&lt;/code&gt;. &lt;a href=&quot;http://bash.cyberciti.biz/guide/Source_command&quot;&gt;Source&lt;/a&gt; activates a series of commands that only apply to that one terminal shell instance, and will end as soon as you close that shell. Which means that if you want to work in a virtualenv, you’ll need to run:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt; $ source what_you_want_to_call_it/bin/activate &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ source what_you_want_to_call_it/bin/activate &lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;every&lt;/strong&gt;
 &lt;strong&gt;single&lt;/strong&gt;
@@ -476,30 +476,32 @@
 &lt;p&gt;Now, I found this tedious. &lt;a href=&quot;http://virtualenvwrapper.readthedocs.org/en/latest/&quot;&gt;virtualenvwrapper&lt;/a&gt; enables more human-readable commands… Sort of.
 After you’ve installed virtualenv, you can:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ pip install virtualenvwrapper  
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip install virtualenvwrapper  
 $ export WORKON_HOME=~/Envs  
 $ source /usr/local/bin/virtualenvwrapper.sh  
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Ok, cool, now all you need to do is create a virtual environment:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt; $ mkvirtualenv your_virtual_env &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ mkvirtualenv your_virtual_env &lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;and then open it up to work on:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt; $ workon your_virtual_env &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ workon your_virtual_env &lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;To end your virtual environment session, all you have to do is deactivate:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;$ deactivate&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ deactivate&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;I find this much more memorable, which is nice. But remember what I just said about &lt;code&gt;source&lt;/code&gt; ? How it only exists in that one shell instance? Yeah. That.&lt;/p&gt;
+&lt;p&gt;I find this much more memorable, which is nice. But remember what I just said about &lt;code class=&quot;highlighter-rouge&quot;&gt;source&lt;/code&gt; ? How it only exists in that one shell instance? Yeah. That.&lt;/p&gt;
 
 &lt;p&gt;This means when you open a new terminal window, you have to run this command:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ export WORKON_HOME=~/Envs  
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ export WORKON_HOME=~/Envs  
 $ source /usr/local/bin/virtualenvwrapper.sh
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;every&lt;/strong&gt;
 &lt;strong&gt;single&lt;/strong&gt;
@@ -518,25 +520,26 @@ $ source /usr/local/bin/virtualenvwrapper.sh
 &lt;p&gt;.bashrc will be located in your root ~/ directory.
 In your terminal, type:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt; $ ls -a &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ ls -a &lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;to see hidden files (ones that start with a .dot). Hopefully you’ll see it there.&lt;/p&gt;
 
 &lt;p&gt;If not, type:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt; $ touch .bashrc &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ touch .bashrc &lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Now, regardless of it if already existed or you just created it, type:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt; $ open .bashrc -a &quot;Text Editor of Your Choice&quot; &lt;/code&gt; (capital letters in the application name matter. So I would type “Sublime Text 2”.)&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ open .bashrc -a &quot;Text Editor of Your Choice&quot; &lt;/code&gt; (capital letters in the application name matter. So I would type “Sublime Text 2”.)&lt;/p&gt;
 
 &lt;p&gt;Now add the three following lines of code:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;export WORKON_HOME=$HOME/.virtualenvs  
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export WORKON_HOME=$HOME/.virtualenvs  
 export PROJECT_HOME=$HOME/Devel
 
 source /usr/local/bin/virtualenvwrapper.sh
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Save your .bashrc file, and restart your terminal.&lt;/p&gt;
 
@@ -544,7 +547,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 &lt;p&gt;Every time you open a new terminal shell, .bashrc will run those three lines of code for you, and the only thing you’ll have remember is:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt; $ workon your_virtual_env &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ workon your_virtual_env &lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;and you’re ready to go!&lt;/p&gt;
 

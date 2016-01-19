@@ -68,23 +68,23 @@
 
 <p>They allow you to install all of your required packages for one project without overriding your globally installed packages. If you want package version 3.0.3 for one project, and package version 2.7.4 for another, virtual environments are your friend.</p>
 
-<p><a href="http://virtualenv.readthedocs.org/en/latest/">virtualenv</a> does this for your python environments. It creates an environment with its own installation directories, separate from that of your usr/local/bin, so anything that you <code>pip install</code> inside of a virtualenv, will only affect that project.</p>
+<p><a href="http://virtualenv.readthedocs.org/en/latest/">virtualenv</a> does this for your python environments. It creates an environment with its own installation directories, separate from that of your usr/local/bin, so anything that you <code class="highlighter-rouge">pip install</code> inside of a virtualenv, will only affect that project.</p>
 
 <p>To install virtualenv, open up your terminal and type in:</p>
 
-<p><code> $ pip install virtualenv </code></p>
+<p><code class="highlighter-rouge"> $ pip install virtualenv </code></p>
 
 <p>To create a virutalenv instance, switch into your project directory:</p>
 
-<p><code> $ cd my_project_folder </code></p>
+<p><code class="highlighter-rouge"> $ cd my_project_folder </code></p>
 
 <p>and make a new virtual environment:</p>
 
-<p><code> $ virtualenv what_you_want_to_call_it </code></p>
+<p><code class="highlighter-rouge"> $ virtualenv what_you_want_to_call_it </code></p>
 
-<p>Now, in order to start your virtualenv, you’ll need to start it up using <code>source</code>. <a href="http://bash.cyberciti.biz/guide/Source_command">Source</a> activates a series of commands that only apply to that one terminal shell instance, and will end as soon as you close that shell. Which means that if you want to work in a virtualenv, you’ll need to run:</p>
+<p>Now, in order to start your virtualenv, you’ll need to start it up using <code class="highlighter-rouge">source</code>. <a href="http://bash.cyberciti.biz/guide/Source_command">Source</a> activates a series of commands that only apply to that one terminal shell instance, and will end as soon as you close that shell. Which means that if you want to work in a virtualenv, you’ll need to run:</p>
 
-<p><code> $ source what_you_want_to_call_it/bin/activate </code></p>
+<p><code class="highlighter-rouge"> $ source what_you_want_to_call_it/bin/activate </code></p>
 
 <p><strong>every</strong>
 <strong>single</strong>
@@ -95,30 +95,32 @@
 <p>Now, I found this tedious. <a href="http://virtualenvwrapper.readthedocs.org/en/latest/">virtualenvwrapper</a> enables more human-readable commands… Sort of.
 After you’ve installed virtualenv, you can:</p>
 
-<pre><code>$ pip install virtualenvwrapper  
+<div class="highlighter-rouge"><pre class="highlight"><code>$ pip install virtualenvwrapper  
 $ export WORKON_HOME=~/Envs  
 $ source /usr/local/bin/virtualenvwrapper.sh  
 </code></pre>
+</div>
 
 <p>Ok, cool, now all you need to do is create a virtual environment:</p>
 
-<p><code> $ mkvirtualenv your_virtual_env </code></p>
+<p><code class="highlighter-rouge"> $ mkvirtualenv your_virtual_env </code></p>
 
 <p>and then open it up to work on:</p>
 
-<p><code> $ workon your_virtual_env </code></p>
+<p><code class="highlighter-rouge"> $ workon your_virtual_env </code></p>
 
 <p>To end your virtual environment session, all you have to do is deactivate:</p>
 
-<p><code>$ deactivate</code></p>
+<p><code class="highlighter-rouge">$ deactivate</code></p>
 
-<p>I find this much more memorable, which is nice. But remember what I just said about <code>source</code> ? How it only exists in that one shell instance? Yeah. That.</p>
+<p>I find this much more memorable, which is nice. But remember what I just said about <code class="highlighter-rouge">source</code> ? How it only exists in that one shell instance? Yeah. That.</p>
 
 <p>This means when you open a new terminal window, you have to run this command:</p>
 
-<pre><code>$ export WORKON_HOME=~/Envs  
+<div class="highlighter-rouge"><pre class="highlight"><code>$ export WORKON_HOME=~/Envs  
 $ source /usr/local/bin/virtualenvwrapper.sh
 </code></pre>
+</div>
 
 <p><strong>every</strong>
 <strong>single</strong>
@@ -137,25 +139,26 @@ $ source /usr/local/bin/virtualenvwrapper.sh
 <p>.bashrc will be located in your root ~/ directory.
 In your terminal, type:</p>
 
-<p><code> $ ls -a </code></p>
+<p><code class="highlighter-rouge"> $ ls -a </code></p>
 
 <p>to see hidden files (ones that start with a .dot). Hopefully you’ll see it there.</p>
 
 <p>If not, type:</p>
 
-<p><code> $ touch .bashrc </code></p>
+<p><code class="highlighter-rouge"> $ touch .bashrc </code></p>
 
 <p>Now, regardless of it if already existed or you just created it, type:</p>
 
-<p><code> $ open .bashrc -a "Text Editor of Your Choice" </code> (capital letters in the application name matter. So I would type “Sublime Text 2”.)</p>
+<p><code class="highlighter-rouge"> $ open .bashrc -a "Text Editor of Your Choice" </code> (capital letters in the application name matter. So I would type “Sublime Text 2”.)</p>
 
 <p>Now add the three following lines of code:</p>
 
-<pre><code>export WORKON_HOME=$HOME/.virtualenvs  
+<div class="highlighter-rouge"><pre class="highlight"><code>export WORKON_HOME=$HOME/.virtualenvs  
 export PROJECT_HOME=$HOME/Devel
 
 source /usr/local/bin/virtualenvwrapper.sh
 </code></pre>
+</div>
 
 <p>Save your .bashrc file, and restart your terminal.</p>
 
@@ -163,7 +166,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 <p>Every time you open a new terminal shell, .bashrc will run those three lines of code for you, and the only thing you’ll have remember is:</p>
 
-<p><code> $ workon your_virtual_env </code></p>
+<p><code class="highlighter-rouge"> $ workon your_virtual_env </code></p>
 
 <p>and you’re ready to go!</p>
 
