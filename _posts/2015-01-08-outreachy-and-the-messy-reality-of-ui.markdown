@@ -4,6 +4,7 @@ title:  "Outreachy and the messy reality of UI"
 author: Lindsey Jacks
 date:   2016-1-8 12:12:09
 categories: outreachy
+comments: True
 excerpt: "<p>There's nothing quite like that sinking, humbling feeling of reality setting in. It turns out creating the perfect UI for Field Papers is a complicated, messy ordeal. It's a nice reminder that I am, in fact, still learning.</p>"
 ---
 
