@@ -24,7 +24,7 @@ The majority of the people were lovely, very excited about the work that they we
 
 I think Recurse Center's [social rules](https://www.recurse.com/manual#sub-sec-social-rules) go a long way to solving this problem - no feigning surprise in particular. It makes it okay to admit ‘__I don't know__’ something, and creates a culture of excitement around introducing someone to something new. Rather than "HOW HAVE YOU NOT HEARD OF X, Y, AND Z?! HAVE YOU BEEN LIVING UNDER A ROCK?!" You get "OMG X, Y, AND Z IS AMAZING! COME! LET ME TAKE YOU ON A JOURNEY! YOU'RE GONNA LOVE IT!" It shifts the focus to building others up instead of putting them down. Who knows, maybe there was someone else who didn't know about x, y, and z either. Now they get to learn something new rather than thanking their lucky stars they weren't stupid enough to ask the question.
 
-I feel like it woudl be tough to judge this attitude in an interview process where admitting you don't know something feels like writing a giant ¯\_(ツ)_/¯ as an answer to a test question. Questions about mentorship and continued education only go so far as boiler plate answers, and besides, who says "nah, we hate that stuff" to a question like that. How do you really find out about the culture before signing on the dotted line?
+I feel like it would be tough to judge this attitude in an interview process where admitting you don't know something feels like writing a giant ¯\_(ツ)_/¯ as an answer to a test question. Questions about mentorship and continued education only go so far as boiler plate answers, and besides, who says "nah, we hate that stuff" to a question like that. How do you really find out about the culture before signing on the dotted line?
 
 ##__The solution?__
 
