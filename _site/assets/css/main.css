@@ -327,6 +327,21 @@ a {
       .post .post-content a:hover {
         transition: color .5s;
         color: #020002; }
+    .post .post-content .blog-image {
+      width: 100%;
+      padding: 0 auto; }
+      .post .post-content .blog-image img {
+        width: 100%;
+        margin: 0 auto;
+        align: center; }
+    .post .post-content .blog-image-small {
+      width: 100%;
+      padding: 0 auto;
+      margin-left: 25%; }
+      .post .post-content .blog-image-small img {
+        width: 50%;
+        margin: 0 auto;
+        align: center; }
 
 .about {
   width: 70%;

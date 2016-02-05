@@ -388,6 +388,28 @@ a {
                 color: $darkest-color;
             }
         }
+
+        .blog-image {
+            width: 100%;
+            padding: 0 auto;
+
+            img {
+                width: 100%;
+                margin: 0 auto;
+                align: center;
+            }
+        }
+        .blog-image-small {
+            width: 100%;
+            padding: 0 auto;
+            margin-left: 25%;
+
+            img {
+                width: 50%;
+                margin: 0 auto;
+                align: center;
+            }
+        }
     }
 
 }

@@ -6,9 +6,40 @@
 </description>
     <link>http://linzjax.github.io/</link>
     <atom:link href="http://linzjax.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 25 Jan 2016 11:21:55 -0500</pubDate>
-    <lastBuildDate>Mon, 25 Jan 2016 11:21:55 -0500</lastBuildDate>
+    <pubDate>Fri, 05 Feb 2016 15:45:29 -0500</pubDate>
+    <lastBuildDate>Fri, 05 Feb 2016 15:45:29 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>First Major PR for Outreachy</title>
+        <description>&lt;h1 id=&quot;its-done&quot;&gt;&lt;strong&gt;It’s done!&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;div class=&quot;blog-image&quot;&gt;&lt;img src=&quot;https://camo.githubusercontent.com/106be48a5af95926193a9f17d5af81889a1d0ea6/687474703a2f2f692e696d6775722e636f6d2f6771305646444e2e706e67&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Well, sort of. This week I submitted my first major pull request for all of the work I’ve been doing on Field Paper’s UI. After two months of &lt;a href=&quot;http://linzjax.github.io/outreachy/2015/12/24/research-rethink-redesign.html&quot;&gt;drawing up mocks&lt;/a&gt;, &lt;a href=&quot;http://linzjax.github.io/outreachy/2016/01/08/outreachy-and-the-messy-reality-of-ui.html&quot;&gt;working through experiments&lt;/a&gt;, and putting together a working product, Ian and I finished putting all the pieces into something that’s actually functional. Is it any good? We’ll see, but at least it works!&lt;/p&gt;
+
+&lt;p&gt;During this last chunk of the process I’ve been learning enough Rails to get by. I’ve worked with Node and Flask in the past, so I have a solid understanding of the basic model view controller structure. I understand what routing is, and how to use template languages such as Jade and Handlebars. When I initially started going through the Rails tutorial, it seemed like familiar territory. But imagine setting out on a cross-country hike, and expecting to come across some challenges: a forest to stumble through, a mountain to scale. However, when you get there, someone’s already cut a clear path through the forest and put up a nice fence with a few benches along the way in case you get tired. They’ve also installed an elevator at the bottom of the mountain, so all that climbing gear you’ve been caring around now seems silly and useless. That’s how I felt learning Rails. I’ve implemented user accounts in the past using Passport, and all of the other libraries that are required to create secure user accounts, and along comes Rails with it’s magical User model generator and &lt;code class=&quot;highlighter-rouge&quot;&gt;has_secure_password&lt;/code&gt;. It’s very disorienting and makes you almost feel like you’re no longer involved in the process. It’s not that the elevator to the top of the mountain isn’t nice, you’re just vaguely suspicious because you can’t tell how it works and can’t see who’s operating it…&lt;/p&gt;
+
+&lt;div class=&quot;blog-image-small&quot;&gt;&lt;img src=&quot;http://cdn02.wallpapersonweb.com/media/w1920x1080/cartoons2/27941-suspicious-fry-futurama-cartoon-desktop-wallpaper-1920x1080.jpg&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;In the end I slogged (or strolled) through, and learned just enough Rails to be able to reconfigure my static Field Papers experiment into the original Field Papers ecosystem. Once it was up and running, it was time to re-write basically all of the CSS I had previously written. If I was going to fully integrate my changes into the original project, I needed to work with the asset pipeline, rather than try and shoehorn my !important changes in. After fiddling with a full-length menu, at the recommendation of both Chandra and Ian, I switched to an accordion menu. One of my favorite things to do in my spare time is learn how to build fancy things in CSS from other people on &lt;a href=&quot;http://codepen.io/&quot;&gt;CodePen&lt;/a&gt;. I ended up not only learning how to build an accordion menu, but also re-learned how to create triangles and arrows in pure css. (Sometimes, I think CSS is really cool. But don’t tell anyone.)&lt;/p&gt;
+
+&lt;p data-height=&quot;429&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;jWZrwq&quot; data-default-tab=&quot;result&quot; data-user=&quot;linzjax&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/linzjax/pen/jWZrwq/&quot;&gt;Accordion Menu&lt;/a&gt; by Lindsey Jacks (&lt;a href=&quot;http://codepen.io/linzjax&quot;&gt;@linzjax&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;There’s still plenty of room for improvement, which is why we’re currently conducting a survey to get feedback from the community. We’re hosting a &lt;a href=&quot;http://fieldpapers-demo.cadasta.org/&quot;&gt;demo platform&lt;/a&gt; where you can checkout the &lt;a href=&quot;https://github.com/Cadasta/fieldpapers/wiki/Field-Papers-Menu-Mock-ups&quot;&gt;options for the side menu&lt;/a&gt;, as well as try out the UI experiments I rambled about in the &lt;a href=&quot;http://linzjax.github.io/outreachy/2016/01/08/outreachy-and-the-messy-reality-of-ui.html&quot;&gt;last blog post&lt;/a&gt;. Though the process is nowhere near complete, I’m really excited about the progress that I’ve made so far. This project has ended up being a really exciting challenge and a great way to solidify my skills and confidence. It feels really good to be able to point to something and say “I built that, and it’s actually helpful to other people”.&lt;/p&gt;
+
+&lt;p&gt;Until next time!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 05 Feb 2016 07:12:09 -0500</pubDate>
+        <link>http://linzjax.github.io/outreachy/2016/02/05/first-major-pr-with-outreachy.html</link>
+        <guid isPermaLink="true">http://linzjax.github.io/outreachy/2016/02/05/first-major-pr-with-outreachy.html</guid>
+        
+        
+        <category>outreachy</category>
+        
+      </item>
     
       <item>
         <title>Admitting you don&#39;t know</title>
@@ -28,7 +59,7 @@
 
 &lt;p&gt;I think Recurse Center’s &lt;a href=&quot;https://www.recurse.com/manual#sub-sec-social-rules&quot;&gt;social rules&lt;/a&gt; go a long way to solving this problem - no feigning surprise in particular. It makes it okay to admit ‘&lt;strong&gt;I don’t know&lt;/strong&gt;’ something, and creates a culture of excitement around introducing someone to something new. Rather than “HOW HAVE YOU NOT HEARD OF X, Y, AND Z?! HAVE YOU BEEN LIVING UNDER A ROCK?!” You get “OMG X, Y, AND Z IS AMAZING! COME! LET ME TAKE YOU ON A JOURNEY! YOU’RE GONNA LOVE IT!” It shifts the focus to building others up instead of putting them down. Who knows, maybe there was someone else who didn’t know about x, y, and z either. Now they get to learn something new rather than thanking their lucky stars they weren’t stupid enough to ask the question.&lt;/p&gt;
 
-&lt;p&gt;I feel like it woudl be tough to judge this attitude in an interview process where admitting you don’t know something feels like writing a giant ¯_(ツ)_/¯ as an answer to a test question. Questions about mentorship and continued education only go so far as boiler plate answers, and besides, who says “nah, we hate that stuff” to a question like that. How do you really find out about the culture before signing on the dotted line?&lt;/p&gt;
+&lt;p&gt;I feel like it would be tough to judge this attitude in an interview process where admitting you don’t know something feels like writing a giant ¯_(ツ)_/¯ as an answer to a test question. Questions about mentorship and continued education only go so far as boiler plate answers, and besides, who says “nah, we hate that stuff” to a question like that. How do you really find out about the culture before signing on the dotted line?&lt;/p&gt;
 
 &lt;h2 id=&quot;the-solution&quot;&gt;&lt;strong&gt;The solution?&lt;/strong&gt;&lt;/h2&gt;
 
