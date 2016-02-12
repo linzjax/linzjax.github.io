@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Handing remote work - pair programming with Cloud9"
+title:  "Handling remote work - pair programming with Cloud9"
 author: Lindsey Jacks
 date:   2016-2-12 15:00:00
 categories: outreachy
