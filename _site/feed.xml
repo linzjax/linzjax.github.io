@@ -6,12 +6,12 @@
 </description>
     <link>http://linzjax.github.io/</link>
     <atom:link href="http://linzjax.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 12 Feb 2016 15:01:12 -0500</pubDate>
-    <lastBuildDate>Fri, 12 Feb 2016 15:01:12 -0500</lastBuildDate>
+    <pubDate>Sat, 13 Feb 2016 09:50:33 -0500</pubDate>
+    <lastBuildDate>Sat, 13 Feb 2016 09:50:33 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
-        <title>Handing remote work - pair programming with Clou9</title>
+        <title>Handling remote work - pair programming with Cloud9</title>
         <description>&lt;p&gt;As my Outreachy internship moves along, and I’m learning just how much I love remote work. I love being able to set my own schedule, take a nap when I need to, cook during my lunch break, and workout when then gym’s not crowded. Also, my couch is really freakin comfortable.&lt;/p&gt;
 
 &lt;p&gt;I was initially worried about remote work because I love pairing with people. I can happily work by myself and look up answers when I get stuck (my google fu is on point), but the way that I really cement knowledge is by pairing with someone who knows more than I do. It’s a way for me to double check my assumptions, and clear up any confusions that I might have been glossing over. There’s also a really good chance I’ll learn something random, like new bash commands. I had gotten really used to doing this at Recurse Center because they encourage you to do it as much as possible, and I was worried about losing that opportunity when I started working remotely.&lt;/p&gt;
