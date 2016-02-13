@@ -398,7 +398,7 @@ a {
 
 @media (max-width: 1300px) {
   .post-title h1 {
-    font-size: 5em; }
+    font-size: 3.5em; }
   .post-title p {
     margin-top: 50px; } }
 @media screen and (max-width: 800px) {
@@ -421,7 +421,7 @@ a {
   .post-title {
     margin-top: 5%; }
     .post-title h1 {
-      font-size: 4.5em; }
+      font-size: 3.5em; }
     .post-title p {
       margin-top: 10px;
       font-size: 2em; }
@@ -456,7 +456,7 @@ a {
   .post-title {
     margin-top: 1%; }
     .post-title h1 {
-      font-size: 3em; }
+      font-size: 2.5em; }
     .post-title p {
       margin-top: 10px;
       font-size: 1.2em; }
