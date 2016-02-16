@@ -27,7 +27,7 @@ I enjoy painting when I have the time for it.
 
 I took 13 years of dance lessons, and was a back-up dancer for drag shows in college.
 
-I'm an opensource/opendata junkie (thanks a lot [Sunlight Foundation](http://sunlightfoundation.com/)).
+I'm an open source/open data junkie (thanks a lot [Sunlight Foundation](http://sunlightfoundation.com/)).
 
 I love good bourbon ([Rock Town: I'm looking at you](https://www.rocktowndistillery.com/)).
 
