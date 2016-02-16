@@ -7,14 +7,14 @@ categories: my-experiences
 excerpt: "<p>Oh New Years. A time for delusional fantasies and misplaced hopes. At least it provides motivation for me to finally get a gym membership.</p>"
 ---
 
-#Oh New Years. 
+# Oh New Years. 
 A time for delusional fantasies and misplaced hopes. At least it provides motivation for me to finally get a gym membership. If I missed out on months of beautiful running weather because I “wasn’t feelin’ it”, there’s no way in hell I’m going to convince myself to go running when New York finally decides it’s time for winter. Maybe between a half-baked new year’s resolution and a $20 a month fee I’ll finally get my butt back in shape again (not that my butt doesn’t already have a lovely shape, but you know).
 
 Eye-rolling sighs aside, this really is something I need to do. My health isn’t what it used to be. My stomach can’t handle eating three slices of cheesecake a day, no matter how hard I might try. Feeling tired, exhausted, and a kinda sad all the time is not really how I want to spend my time. So, after a few difficult goodbyes to my junk food collection and an awkward re-acquaintance with my tennis shoes (“oh, it’s you again…”), I’ve decided to start this blog as a way to keep myself accountable.
 
 <br />
 
-#__My Goals__
+# __My Goals__
 
 Honestly, no section should start with “My Goals”. “What I hope to accomplish if maybe, for once, I can hold myself accountable to something longer than it takes to say ‘gosh my bed is warm'” would be much closer to the truth. Anyway…
 

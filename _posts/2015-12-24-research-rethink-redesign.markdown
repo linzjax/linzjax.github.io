@@ -32,7 +32,7 @@ Demodalization involves combining all three map composition steps onto a single 
 
 Addressing these issues needed to start with creating a full screen map display that could incorporate all possible map interactions onto a single page. Rather than jumping straight into building, I started with research, sketches and wireframes.
 
-##__Research__##
+## __Research__
 
 
 My first task was to see [what other people were doing](http://linzjax.github.io/fieldpapers/notes-page/).
@@ -91,7 +91,7 @@ Separate actions into different menus only if it makes sense. <br />
 If you're ever uncertain, include a help section. <br />
 	If you think any of the interaction or icons might be confusing, include a help section. Heck, even if you don't think it's confusing, _include a help section_.
 
-##__Rethink__##
+## __Rethink__
 
 
 After my initial research and with these notes in mind, I settled down to do a quick 20 minute sketch session. The purpose of this exercise was to get as many ideas as I could in the allotted time, and to not stop until the timer was done.

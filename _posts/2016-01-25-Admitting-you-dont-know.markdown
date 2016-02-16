@@ -10,7 +10,7 @@ excerpt: "<p>Saying \"I don't know what that is\" has become one of my favorite 
 
 Have I bragged about Recurse, or Outreachy lately? Oh, I have? Well, I'm going to do it again.
 
-##__Reason #142 (or whatever)  why I'm thankful for Recurse/Outreachy:__
+## __Reason #142 (or whatever)  why I'm thankful for Recurse/Outreachy:__
 
 Recurse provided me with the courage and enthusiasm to admit when I don't know something, the excitement of being presented with completely new information, and the hubris to know that I could tackle any challenge put in front of me if given enough time and support. Saying "__I don't know what that is__" has become one of my favorite phrases. It's not admitting defeat, it's not revealing the fact that I secretly know nothing (buzz off imposter syndrome) - it's an opportunity. They get to feel good about explaining something, and I get to learn something new. It's a win-win situation.
 
@@ -26,6 +26,6 @@ I think Recurse Center's [social rules](https://www.recurse.com/manual#sub-sec-s
 
 I feel like it would be tough to judge this attitude in an interview process where admitting you don't know something feels like writing a giant ¯\_(ツ)_/¯ as an answer to a test question. Questions about mentorship and continued education only go so far as boiler plate answers, and besides, who says "nah, we hate that stuff" to a question like that. How do you really find out about the culture before signing on the dotted line?
 
-##__The solution?__
+## __The solution?__
 
 I actually have no answers to this so…. ‘__I don't know!__’ (see what I did there?). So if anyone has any suggestions I'd love to hear them!
