@@ -8,7 +8,7 @@ comments: True
 excerpt: "<p>It's done! Well, sort of. This week I submitted my first major pull request for all of the work I've been doing on Field Paper's UI. After two months of drawing up mocks, working through experiments, and putting together a working product, Ian and I finished putting all the pieces into something that's actually functional. Is it any good? We'll see, but at least it works!</p>"
 ---
 
-#__It's done!__
+# __It's done!__
 
 <div class='blog-image'><img src='https://camo.githubusercontent.com/106be48a5af95926193a9f17d5af81889a1d0ea6/687474703a2f2f692e696d6775722e636f6d2f6771305646444e2e706e67'></div>
 <br />
