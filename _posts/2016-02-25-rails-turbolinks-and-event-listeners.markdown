@@ -1,6 +1,6 @@
 ---
 title:  "Rails, Turbolinks, and Event Listeners"
-date:   2016-2-24 12:12:09
+date:   2016-2-24 12:12:10
 excerpt: "<p>A few weeks ago, I was happily puttering along making my accordion menu for the new Field Papers UI (cue "oohs and aaahs"), when Ian pointed out that it sporadically wasn't working. After a bit more investigating, I discovered the culprit: Turbolinks.</p>"
 ---
 
