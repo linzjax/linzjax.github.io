@@ -1,7 +1,7 @@
 ---
 title:  "Rails, Turbolinks, and Event Listeners"
 date:   2016-2-24 12:12:09
-excerpt: "<p> Something to see if this makes any difference.</p>"
+excerpt: "<p>A few weeks ago, I was happily puttering along making my accordion menu for the new Field Papers UI (cue "oohs and aaahs"), when Ian pointed out that it sporadically wasn't working. After a bit more investigating, I discovered the culprit: [Turbolinks](https://github.com/turbolinks/turbolinks).</p>"
 ---
 
 I finally learned to spell a-c-c-o-r-d-i-o-n. A few weeks ago, I was happily puttering along making my accordion menu for the new Field Papers UI (cue "oohs and aaahs"), when Ian pointed out that it sporadically wasn't working. The menu items wouldn't allow you to click on them, but refreshing the page seemed to fix it. After determining that this was indeed a bit odd, I set about to find a solution.
