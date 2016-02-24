@@ -1,10 +1,6 @@
 ---
-layout: post
 title:  "Handling remote work - pair programming with Cloud9"
-author: Lindsey Jacks
 date:   2016-2-12 15:00:00
-categories: outreachy
-comments: True
 excerpt: "<p>As my Outreachy internship moves along, and I'm learning just how much I love remote work. I was initially worried about remote work because I love pairing with people, but Cloud9 provides a creative solution to that problem.</p>"
 ---
 
