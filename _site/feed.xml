@@ -6,9 +6,52 @@
 </description>
     <link>http://linzjax.github.io/</link>
     <atom:link href="http://linzjax.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 24 Feb 2016 11:25:05 -0500</pubDate>
-    <lastBuildDate>Wed, 24 Feb 2016 11:25:05 -0500</lastBuildDate>
+    <pubDate>Wed, 24 Feb 2016 11:45:15 -0500</pubDate>
+    <lastBuildDate>Wed, 24 Feb 2016 11:45:15 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Rails, Turbolinks, and Event Listeners</title>
+        <description>&lt;p&gt;I finally learned to spell a-c-c-o-r-d-i-o-n. A few weeks ago, I was happily puttering along making my accordion menu for the new Field Papers UI (cue “oohs and aaahs”), when Ian pointed out that it sporadically wasn’t working. The menu items wouldn’t allow you to click on them, but refreshing the page seemed to fix it. After determining that this was indeed a bit odd, I set about to find a solution.&lt;/p&gt;
+
+&lt;p&gt;After a bit more investigating, I determined that it only occurred when you started from a different page and then clicked on a link to the compose page. For example, I enter through the home url, click “Make an atlas”, and click forlornly on non-responsive accordion menus. Refresh the page, and triumphantly click on beautifully responsive accordion menus. This was a less than ideal situation, so after gathering evidence I discovered the culprit: &lt;a href=&quot;https://github.com/turbolinks/turbolinks&quot;&gt;Turbolinks&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Turbolinks is a Rails plugin that allows your rails app to behave like a single page application, and only loads the JavaScript and CSS once, instead of between each page change. In most circumstances, this would be fantastic. Faster load times, happier visitors, everyone wins.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;BUT&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The problem that I was running into is that since Turbolinks runs all of the JavaScript files once, and only once, my poor event listeners were trying to find objects that didn’t exist and giving up hope after the first page load. This explains why it worked when you refreshed the page, but didn’t work when you started somewhere else.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(document).on(&quot;ready&quot;, function(){
+   //sad code that never happens :(
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Thankfully, once the culprit was identified, the fix was rather simple. Turbolinks has its own events, so instead of &lt;em&gt;ready&lt;/em&gt; we listen for &lt;em&gt;page:change&lt;/em&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(document).on(&quot;page:change&quot;, function(){
+   //happy code that&#39;s executed every time you go to a new page :D
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Another option is to disable Turbolinks in all of the connecting &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;a&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;a data-no-turbolink=&quot;true&quot; href=&quot;&amp;lt;%= compose_path %&amp;gt;&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And voila! Your JavaScript and CSS are reloaded only on the important pages.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 24 Feb 2016 07:12:09 -0500</pubDate>
+        <link>http://linzjax.github.io/outreachy/2016/02/24/rails-turbolinks-and-event-listeners.html</link>
+        <guid isPermaLink="true">http://linzjax.github.io/outreachy/2016/02/24/rails-turbolinks-and-event-listeners.html</guid>
+        
+        
+        <category>outreachy</category>
+        
+      </item>
     
       <item>
         <title>Handling remote work - pair programming with Cloud9</title>
@@ -529,126 +572,6 @@
         <category>My</category>
         
         <category>experiences</category>
-        
-        <category>outreachy</category>
-        
-      </item>
-    
-      <item>
-        <title>Getting virtualenvwrapper to stick around</title>
-        <description>&lt;p&gt;&lt;strong&gt;Virtual environments are awesome.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;They allow you to install all of your required packages for one project without overriding your globally installed packages. If you want package version 3.0.3 for one project, and package version 2.7.4 for another, virtual environments are your friend.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://virtualenv.readthedocs.org/en/latest/&quot;&gt;virtualenv&lt;/a&gt; does this for your python environments. It creates an environment with its own installation directories, separate from that of your usr/local/bin, so anything that you &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install&lt;/code&gt; inside of a virtualenv, will only affect that project.&lt;/p&gt;
-
-&lt;p&gt;To install virtualenv, open up your terminal and type in:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ pip install virtualenv &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;To create a virutalenv instance, switch into your project directory:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ cd my_project_folder &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;and make a new virtual environment:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ virtualenv what_you_want_to_call_it &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Now, in order to start your virtualenv, you’ll need to start it up using &lt;code class=&quot;highlighter-rouge&quot;&gt;source&lt;/code&gt;. &lt;a href=&quot;http://bash.cyberciti.biz/guide/Source_command&quot;&gt;Source&lt;/a&gt; activates a series of commands that only apply to that one terminal shell instance, and will end as soon as you close that shell. Which means that if you want to work in a virtualenv, you’ll need to run:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ source what_you_want_to_call_it/bin/activate &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;every&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;single&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;time.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Now, I found this tedious. &lt;a href=&quot;http://virtualenvwrapper.readthedocs.org/en/latest/&quot;&gt;virtualenvwrapper&lt;/a&gt; enables more human-readable commands… Sort of.&lt;br /&gt;
-After you’ve installed virtualenv, you can:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip install virtualenvwrapper  
-$ export WORKON_HOME=~/Envs  
-$ source /usr/local/bin/virtualenvwrapper.sh  
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Ok, cool, now all you need to do is create a virtual environment:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ mkvirtualenv your_virtual_env &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;and then open it up to work on:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ workon your_virtual_env &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;To end your virtual environment session, all you have to do is deactivate:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ deactivate&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;I find this much more memorable, which is nice. But remember what I just said about &lt;code class=&quot;highlighter-rouge&quot;&gt;source&lt;/code&gt; ? How it only exists in that one shell instance? Yeah. That.&lt;/p&gt;
-
-&lt;p&gt;This means when you open a new terminal window, you have to run this command:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ export WORKON_HOME=~/Envs  
-$ source /usr/local/bin/virtualenvwrapper.sh
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;every&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;single&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;time.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Otherwise virtualenvwrapper disappears and none of the commands will work.&lt;/p&gt;
-
-&lt;p&gt;So while, sure it’s more readable once you get things set up, you still have to constantly set things up.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;But there’s a solution.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; If you already use virtualenvwrapper, this will change where virtualenvwrapper looks for your virtual environments, so they won’t be accessible anymore, and you’ll need to recreate them.&lt;/p&gt;
-
-&lt;p&gt;Open up your .bashrc file (or create one if you don’t have it.) &lt;a href=&quot;http://hacktux.com/bash/bashrc/bash_profile&quot;&gt;.bashrc&lt;/a&gt; contains a list of commands that are executed every time you open up a new terminal window.&lt;/p&gt;
-
-&lt;p&gt;.bashrc will be located in your root ~/ directory.&lt;br /&gt;
-In your terminal, type:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ ls -a &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;to see hidden files (ones that start with a .dot). Hopefully you’ll see it there.&lt;/p&gt;
-
-&lt;p&gt;If not, type:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ touch .bashrc &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Now, regardless of it if already existed or you just created it, type:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ open .bashrc -a &quot;Text Editor of Your Choice&quot; &lt;/code&gt; (capital letters in the application name matter. So I would type “Sublime Text 2”.)&lt;/p&gt;
-
-&lt;p&gt;Now add the three following lines of code:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export WORKON_HOME=$HOME/.virtualenvs  
-export PROJECT_HOME=$HOME/Devel
-
-source /usr/local/bin/virtualenvwrapper.sh
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Save your .bashrc file, and restart your terminal.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Now!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Every time you open a new terminal shell, .bashrc will run those three lines of code for you, and the only thing you’ll have remember is:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; $ workon your_virtual_env &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;and you’re ready to go!&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 05 Oct 2015 11:52:09 -0400</pubDate>
-        <link>http://linzjax.github.io/how-to/outreachy/2015/10/05/making-virutalenvwrapper-stick-around.html</link>
-        <guid isPermaLink="true">http://linzjax.github.io/how-to/outreachy/2015/10/05/making-virutalenvwrapper-stick-around.html</guid>
-        
-        
-        <category>how-to</category>
         
         <category>outreachy</category>
         

@@ -1,6 +1,6 @@
 ---
-title:  "Rails, Turbolinks, and event listeners"
-date:   2016-2-25 12:12:09
+title:  "Rails, Turbolinks, and Event Listeners"
+date:   2016-2-24 12:12:09
 excerpt: "<p> Something to see if this makes any difference.</p>"
 ---
 
@@ -28,8 +28,10 @@ $(document).on("page:change", function(){
 });
 ```
 
-Another option is to disable Turbolinks in all of the connecting <a> tags.
+Another option is to disable Turbolinks in all of the connecting ``<a>`` tags.
 
-` <a data-no-turbolink="true" href="<%= compose_path %>"> `
+```
+<a data-no-turbolink="true" href="<%= compose_path %>">
+```
 
 And voila! Your JavaScript and CSS are reloaded only on the important pages.
