@@ -3,50 +3,31 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
-$base-font-family: 'Old Standard TT', serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-$header-font-family: 'Over the Rainbow', cursive;
-
+$base-font-size:   18px;
 $spacing-unit:     30px;
 
+$banner-color: #1F6770;
+$neutral-color: #ebd6b6;
+$font-color: #120b08;
+$light-neutral-color: #ffffe8;
 
-
-
-$teal-color: #5bc292;
-$darkest-color: #020002;
-$background-color: #FFFFFF;
-$font-color: #1B2022;
-
+$banner-width: 200px;
+$right-flag: $banner-width + 35px;
 
 
 // Width of the content area
 $content-width:    800px;
-
 $on-palm:          600px;
 $on-laptop:        800px;
 
 
-
-
-
 // Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
     }
 }
-
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
