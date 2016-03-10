@@ -30,6 +30,10 @@ h1 {
   font-family: 'Dancing Script', cursive;
 }
 
+a {
+  transition: color 0.5s;
+}
+
 
 .wrapper {
   width: 100%;
@@ -37,33 +41,41 @@ h1 {
   position: relative;
   margin: 0 auto;
 
+  .site-header-container {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    .main-title {
+      width: 60%;
+      max-width: 350px;
+      padding: 20px;
+      padding-bottom: 50px;
+      padding-right: 0;
+      z-index: 2;
 
-  .main-title {
-    width: 60%;
-    max-width: 350px;
-    padding: 20px;
-    padding-bottom: 50px;
-    padding-right: 0;
-    z-index: 2;
+      // @include fadeItIn;
+      
 
-    // @include fadeItIn;
-    
+      h1 {
+          font-size: 3rem;
 
-    h1 {
-        font-size: 3rem;
-
+      }
     }
-  }
 
-  .site-nav {
-    padding-top: 10px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    a {
-      margin-right: 10px;
+    .site-nav {
+      padding-top: 10px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      a {
+        margin-right: 10px;
+        color: $font-color;
+        text-decoration: none;
 
-      text-decoration: none;
+        &:hover {
+          color: $banner-color;
+        }
+      }
     }
   }
 }
@@ -327,7 +339,11 @@ h1 {
 
         a {
           text-decoration: none;
-          color: black;
+          color: $banner-color;
+
+          &:hover {
+            color: $accent-color;
+          }
           i {
             width: 50px;
             height: 50px;
@@ -342,6 +358,11 @@ h1 {
 
           a {
             text-decoration: none;
+            color: $banner-color;
+
+            &:hover {
+              color: $accent-color;
+            }
           }
         }
       }
@@ -367,11 +388,29 @@ BANNER
   .main-section-banner {
       position: relative;
       width: 300px;
+
+      @include tablet {
+        width: 400px;
+      }
+
+      @include desktop {
+        width: 500px;
+      }
+
       margin: 0 auto;
       margin-bottom: 80px;
 
       .banner-body {
         width: $banner-width;
+
+        @include tablet {
+          width: 300px;
+        }
+
+        @include desktop {
+          width: 400px;
+        }
+
         height: 50px;
         background-color: $banner-color;
         position: absolute;
@@ -432,6 +471,15 @@ BANNER
         position: absolute;
         top: 0px;
         left: $right-flag;
+
+        @include tablet {
+          left: 335px;
+        }
+
+        @include desktop {
+          left: 435px;
+        }
+
         box-shadow: -1px 1px 1px darken($banner-color, 15%);
         
         &:after {
