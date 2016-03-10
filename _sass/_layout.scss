@@ -5,23 +5,44 @@
 
 body {
   width: 100%;
+  background-color: $light-neutral-color;
+  color: $font-color;
 }
 
 .site-header {
-  border-bottom: 2px solid black;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  background: 
+    url('../img/holder_header.jpg') no-repeat;
+  background-size: cover;
+  box-shadow: 5px 0 5px $font-color, -5px 0 5px $font-color;
+  margin-top: 0;
+  z-index: 1;
+  @include darkOverlay;
+
+  &:after {
+    background: rgba($neutral-color ,0.5);
+  }
 }
 
 
 .wrapper {
-  width: 100vw;
+  width: 100%;
+  max-width: 650px;
   position: relative;
+  margin: 0 auto;
+
 
   .main-title {
-    // height: 300px;
     width: 60%;
+    max-width: 350px;
     padding: 20px;
     padding-bottom: 50px;
     padding-right: 0;
+    z-index: 2;
+
+    // @include fadeItIn;
     
 
     h1 {
@@ -31,7 +52,7 @@ body {
   }
 
   .site-nav {
-    margin-top: 10px;
+    padding-top: 10px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
@@ -47,23 +68,59 @@ body {
   display: flex;
   flex-flow: column;
   flex-flow: no-wrap;
-
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 5px 0 5px $font-color, -5px 0 5px $font-color;
   .main-section {
     position: relative;
     padding-bottom: 60px;
     border-bottom: 2px solid black;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
   }
 
   .main-projects, .main-blog-posts, .main-contact, .main-about {
-    width: 90vw;
+    width: 80%;
     margin: 0 auto;
   }
 
   /**********
   CURRENT PROJECTS
   ***********/
+  .main-section-projects, .main-section-about {
+    background-color: $font-color;
+    @include gradient(rgba($font-color, 1), rgba($font-color, 0.9));
+    // z-index: -1;
+
+    .banner-body {
+      // z-index: 4;
+    }
+    .banner-tail-left {
+      &:after {
+        border-left: 20px solid $font-color !important;
+      }
+    }
+
+    .banner-tail-right {
+      &:before {
+        border-right: 20px solid $font-color !important;
+      }
+    }
+  }
+
+  .main-section-blog, .main-section-contact {
+    @include checkers;
+    // z-index: -2;
+
+    &:after {
+     
+
+    }
+
+    .banner-body {
+      // z-index: 8;
+    }
+  }
 
   .main-projects-gallery {
     // height: 300px;
@@ -77,6 +134,7 @@ body {
       border: 2px solid black;
       width: calc(50% - 5px);
       margin-bottom: 10px;
+      background-color: white;
     }
 
     .project-lrg {
@@ -138,10 +196,13 @@ body {
   .main-about {
     display: flex;
     flex-flow: row wrap;
-    width: 90vw;
 
     .main-about-body{
         width: 100%;
+
+        @include tablet {
+          width: calc(100% - 240px);
+        }
     }
     .main-about-photo-gallery {
       display: flex;
@@ -149,10 +210,14 @@ body {
       justify-content: center;
       margin: 10px auto;
       margin-bottom: 20px;
+      margin-left: 0;
       width: 100%;
 
       @include tablet {
-          width: 500px;
+          justify-content: flex-start;
+          margin-top: 0;
+          width: 220px;
+          height: 220px;
       }
 
       .image {
@@ -162,7 +227,7 @@ body {
         margin: 5px;
 
         @include tablet {
-          width: calc((500px/3) - 10px);
+          margin-bottom: 0;
         }
 
         img {
@@ -171,81 +236,71 @@ body {
           object-fit: cover;
         }
       }
-
-      .below-fold {
-        height: 0;
-        width: 0;
-        opacity: 0;
-        position: fixed;
-
-        @include tablet {
-          height: 140px;
-          width: calc((500px/3) - 10px);
-          opacity: 1;
-          position: relative;
-        }
-      }
     }
   }
 
   /**********
   CONTACT
   **********/
+  .main-contact {
+    max-width: 400px;
+    .main-contact-form {
+      border: 2px solid black;
+      background-color: $light-neutral-color;
+      padding-top: 10%;
+      padding-bottom: 10%;
 
-  .main-contact-form {
-    border: 2px solid black;
-    padding-top: 10%;
-    padding-bottom: 10%;
-
-    form {
-      width: 80%;
-      margin: 0 auto;
-      font-size: 1.2rem;
-        
-      label {
-        float: left;
-        display: inline-block;
-        text-align: left;
-        margin-right: 10px;
-        width: 100%;
-      }
-
-      input[type='text'], input[type='email'], textarea{
-        color: #555;
-        width: 100%;
-        padding: 3px 0px 3px 5px;
-        margin-top: 2px;
-        margin-right: 6px;
-        margin-bottom: 10px;
-        border: 1px solid grey;
-        border-radius: 3px;
-        background: #fbfbfb;
-        height: 25px;
-        line-height:15px;
-        outline: 0;
-        -webkit-box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
-        box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
-      }
-
-      textarea{
-        height:100px;
-        padding: 5px 0px 0px 5px;
-      }
-
-      input[type='submit'] {
-        width: 100%;
-        background: #FFF;
-        border: 1px solid #CCC;
-        padding: 10px 25px 10px 25px;
-        color: #333;
-        border-radius: 5px;
+      form {
+        width: 80%;
+        margin: 0 auto;
         font-size: 1.2rem;
+          
+        label {
+          float: left;
+          display: inline-block;
+          text-align: left;
+          margin-right: 10px;
+          width: 100%;
+          color: $font-color;
+        }
 
-        &:hover {
-          cursor: pointer;
-          // color: $font-color;
-          // background-color: $background-color;
-          border-color: #ADADAD;
+        input[type='text'], input[type='email'], textarea{
+          color: #555;
+          width: 100%;
+          padding: 3px 0px 3px 5px;
+          margin-top: 2px;
+          margin-right: 6px;
+          margin-bottom: 10px;
+          border: 1px solid grey;
+          border-radius: 3px;
+          background: #fbfbfb;
+          height: 25px;
+          line-height:15px;
+          outline: 0;
+          -webkit-box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
+          box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
+        }
+
+        textarea{
+          height:100px;
+          padding: 5px 0px 0px 5px;
+        }
+
+        input[type='submit'] {
+          width: 100%;
+          background: #FFF;
+          border: 1px solid #CCC;
+          padding: 10px 25px 10px 25px;
+          color: #333;
+          border-radius: 5px;
+          font-size: 1.2rem;
+
+          &:hover {
+            cursor: pointer;
+            // color: $font-color;
+            // background-color: $background-color;
+            border-color: #ADADAD;
+          }
         }
       }
     }
@@ -306,30 +361,32 @@ BANNER
       width: 300px;
       margin: 0 auto;
       margin-bottom: 80px;
+
       .banner-body {
         width: $banner-width;
         height: 50px;
-        background-color: white;
-        border: 1px solid black;
+        background-color: $banner-color;
         position: absolute;
-        top: -25px;
+        top: -30px;
         left: 50px;
-        z-index: 3;
+        z-index: 999;
+        box-shadow: 1px 0 1px darken($banner-color, 10%), -1px 1px 1px darken($banner-color, 10%);
        
         h1 {
           text-align: center;
           margin-top: 10px;
-          color: black;
+          color: $light-neutral-color;
         }
       }
 
       .banner-tail-left {
         width: 50px;
         height: 40px;
-        background-color: grey;
+        background-color: darken($banner-color, 6);
         position: absolute;
-        top: 0;
+        top: 0px;
         left: 15px;
+        box-shadow: 1px 1px 1px darken($banner-color, 15%);
         
         &:after {
           content: ' ';
@@ -338,9 +395,9 @@ BANNER
           height: 0;
           border-top: 20px solid transparent;
           border-bottom: 20px solid transparent;
-          border-left: 20px solid white;
+          border-left: 20px solid $neutral-color;
           top: 0;
-          left: 0;
+          left: -1px;
         }
         
         &:before {
@@ -350,7 +407,7 @@ BANNER
           height: 0;
           border-left: 15px solid transparent;
           border-bottom: 5px solid transparent;
-          border-top: 20px solid black;
+          border-top: 20px solid darken($banner-color, 15%);
           top: 20px;
           left: 35px;
         }
@@ -359,10 +416,11 @@ BANNER
       .banner-tail-right {
         width: 50px;
         height: 40px;
-        background-color: grey;
+        background-color: darken($banner-color, 6);
         position: absolute;
-        top: 0;
+        top: 0px;
         left: $right-flag;
+        box-shadow: -1px 1px 1px darken($banner-color, 15%);
         
         &:after {
           content: ' ';
@@ -371,7 +429,7 @@ BANNER
           height: 0;
           border-right: 15px solid transparent;
           border-bottom: 5px solid transparent;
-          border-top: 20px solid black;
+          border-top: 20px solid darken($banner-color, 15%);
           top: 20px;
           left: 0;
         }
@@ -383,9 +441,9 @@ BANNER
           height: 0;
           border-top: 20px solid transparent;
           border-bottom: 20px solid transparent;
-          border-right: 20px solid white;
+          border-right: 20px solid $neutral-color;
           top: 0px;
-          left: 30px;
+          left: 31px;
         }
       }
     }

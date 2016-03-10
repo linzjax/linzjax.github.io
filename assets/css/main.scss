@@ -8,8 +8,9 @@ $base-font-size:   18px;
 $spacing-unit:     30px;
 
 $banner-color: #1F6770;
+$font-color: #130B08;
+$accent-color: #6DBEA0;
 $neutral-color: #ebd6b6;
-$font-color: #120b08;
 $light-neutral-color: #ffffe8;
 
 $banner-width: 200px;
@@ -35,6 +36,95 @@ $desktop-width: 1024px;
   @media (min-width: #{$width}) {
     @content;
   }
+}
+
+@-webkit-keyframes fadeIn { from { 
+    opacity:0; 
+    opacity: 1\9; /* IE9 only */
+  } to { 
+    opacity:1; 
+  } 
+}
+
+@-moz-keyframes fadeIn { 
+  from { 
+    opacity:0; 
+    opacity: 1\9; /* IE9 only */
+  } to { 
+    opacity:1; 
+  }
+}
+
+@keyframes fadeIn { 
+  from { 
+    opacity:0; 
+    opacity: 1\9; /* IE9 only */
+  } to { 
+    opacity:1; 
+  }
+}
+
+@mixin fadeItIn {
+  opacity:0;  
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:0.5s;
+  -moz-animation-duration:0.5s;
+  animation-duration:0.5s;
+}
+
+@mixin darkOverlay {
+  &:after{
+    content: "";
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;  // Take note of this negative z-index and compare to each article's positive z-index. This helps your content to show up over the overlay.
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+@mixin gradient($first, $second) {
+  background: $first; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($first, $second); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($first, $second); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($first, $second); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($first, $second); /* Standard syntax */
+}
+
+@mixin checkers {
+  font: normal 0.5px/normal Arial, Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  background: -webkit-linear-gradient(135deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), -webkit-linear-gradient(45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), #EBD6B6;
+  background: -moz-linear-gradient(-45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), -moz-linear-gradient(45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), #EBD6B6;
+  background: linear-gradient(-45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), linear-gradient(45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), #EBD6B6;
+  background-position: auto auto;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: 200em 200em;
+  background-size: 200em 200em;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  -webkit-transform: none;
+  transform: none;
+  -webkit-transform-origin: 50% 50% 0;
+  transform-origin: 50% 50% 0;
 }
 
 // Import partials from `sass_dir` (defaults to `_sass`)
