@@ -9,7 +9,7 @@ layout: default
 </header>
 
 <div class="wrapper main-content">
-  <div class="main-section main-projects">
+  <div class="main-section">
     <div class='main-section-banner'>
       <div class='banner-tail-left'></div>
       <div class='banner-body'>
@@ -17,18 +17,20 @@ layout: default
       </div>
       <div class='banner-tail-right'></div>
     </div>
-    <div class='main-projects-gallery'>
-      <div class='main-projects-project project-lrg'></div>
-      <div class='main-projects-group'>
-        <div class='main-projects-project project-sm'></div>
-        <div class='main-projects-project project-sm'></div>
-        <div class='main-projects-project project-sm'></div>
-        <div class='main-projects-project project-sm'></div>
+    <div class='main-projects'>
+      <div class='main-projects-gallery'>
+        <div class='main-projects-project project-lrg'></div>
+        <div class='main-projects-group'>
+          <div class='main-projects-project project-sm'></div>
+          <div class='main-projects-project project-sm'></div>
+          <div class='main-projects-project project-sm'></div>
+          <div class='main-projects-project project-sm'></div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="main-section main-blog">
+  <div class="main-section">
     <div class='main-section-banner'>
       <div class='banner-tail-left'></div>
       <div class='banner-body'>
@@ -36,31 +38,33 @@ layout: default
       </div>
       <div class='banner-tail-right'></div>
     </div>
-    <div class="main-blog-posts">
-      <ul class="post-list">
-          {% for post in site.posts limit: 2%}
-          <div class='main-new-post'>
-            <li>
-              <header class="main-post-header">
-                <h1>
-                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </h1>
-                 <p class="main-post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-              </header>
+    <div class='main-blog'>
+      <div class="main-blog-posts">
+        <ul class="post-list">
+            {% for post in site.posts limit: 2%}
+            <div class='main-new-post'>
+              <li>
+                <header class="main-post-header">
+                  <h1>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  </h1>
+                   <p class="main-post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+                </header>
 
-              <article class="main-post-excerpt">
-                 {{ post.excerpt }}
-                 <a href='{{post.url | prepend: site.baseurl }}'>...</a>
-              </article>
+                <article class="main-post-excerpt">
+                   {{ post.excerpt }}
+                   <a href='{{post.url | prepend: site.baseurl }}'>...</a>
+                </article>
 
-            </li>
-        </div>
-          {% endfor %}
-        </ul>
+              </li>
+          </div>
+            {% endfor %}
+          </ul>
+      </div>
     </div>
   </div>
 
-  <div class='main-section main-about'>
+  <div class='main-section'>
     <div class='main-section-banner'>
       <div class='banner-tail-left'></div>
       <div class='banner-body'>
@@ -68,17 +72,60 @@ layout: default
       </div>
       <div class='banner-tail-right'></div>
     </div>
-    <div class='main-about-body'>
-        Repellat culpa voluptatem suscipit quibusdam qui recusandae doloribus perferendis. Aut cupiditate vel necessitatibus. Aperiam ea possimus atque rem sed quis similique cumque.
-        Enim voluptatem ducimus corrupti.Amet rerum aut quo nisi. Enim saepe quo et error. Sit dolore quas delectus aperiam veritatis corporis rerum cupiditate.
-        Fugit tempora fugiat tenetur alias quisquam. Sed consequatur laborum aliquam quam tempore enim ullam. Vero eos reiciendis quibusdam et et.
-    </div>
-    <div class='main-about-photo-gallery'>
+    <div class='main-about'>
+      <div class='main-about-photo-gallery'>
+        <div class='image skew-right'>
+          <!-- <img src='#' alt='' class=''> -->
+        </div>
 
+        <div class='image skewed-straight'>
+          <!-- <img src='#' alt='' class=''> -->
+        </div>
+
+        <div class='image below-fold skewed-straight'>
+          <!-- <img src='#' alt='' class=''> -->
+        </div>
+
+        <div class='image skewed-straight'>
+          <!-- <img src='#' alt='' class=''> -->
+        </div>  
+
+
+        <div class='image  skew-left'>
+          <!-- <img src='#' alt='' class=''> -->
+        </div>
+                
+        <div class='image below-fold skew-right'>
+          <!-- <img src='#' alt='' class=''> -->
+        </div>
+
+
+
+        <div class='image below-fold skew-left'>
+          <!-- <img src='#' alt='' class=''> -->
+        </div>
+
+        <div class='image below-fold skew-right'>
+          <!-- <img src='#' alt='' class=''> -->
+        </div>
+
+        <div class='image below-fold skewed-straight'>
+          <!-- <img src='#' alt='' class=''> -->
+        </div>  
+
+        <div class='image below-fold skewed-straight'>
+          <!-- <img src='#' alt='' class=''> -->
+        </div>
+      </div>
+      <div class='main-about-body'>
+          Repellat culpa voluptatem suscipit quibusdam qui recusandae doloribus perferendis. Aut cupiditate vel necessitatibus. Aperiam ea possimus atque rem sed quis similique cumque.
+          Enim voluptatem ducimus corrupti.Amet rerum aut quo nisi. Enim saepe quo et error. Sit dolore quas delectus aperiam veritatis corporis rerum cupiditate.
+          Fugit tempora fugiat tenetur alias quisquam. Sed consequatur laborum aliquam quam tempore enim ullam. Vero eos reiciendis quibusdam et et.
+      </div>
     </div>
   </div>
 
-  <div class='main-section main-contact'>
+  <div class='main-section'>
     <div class='main-section-banner'>
       <div class='banner-tail-left'></div>
       <div class='banner-body'>
@@ -86,16 +133,19 @@ layout: default
       </div>
       <div class='banner-tail-right'></div>
     </div>
+    <div class='main-contact'>
       <div class='main-contact-form'>
-      <form>
-        <label for='name'>Name</label>
-        <input type='text' name='name'>
-        <label for='email'>Email</label>
-        <input type='email' name='email'>
-        <label for='message'>What's on your mind?</label>
-        <textarea name='message'></textarea>
-        <button type='submit'>Send</button>
-      </form>
+        <form>
+          <label for='name'>Name</label>
+          <input type='text' name='name'>
+          <label for='email'>Email</label>
+          <input type='email' name='email'>
+          <label for='message'>What's on your mind?</label>
+          <textarea name='message'></textarea>
+          <input type='submit' value='Send'>
+        </form>
+      </div>
     </div>
   </div>
+</div>
       

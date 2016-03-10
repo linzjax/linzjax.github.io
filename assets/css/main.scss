@@ -16,19 +16,26 @@ $banner-width: 200px;
 $right-flag: $banner-width + 35px;
 
 
-// Width of the content area
-$content-width:    800px;
-$on-palm:          600px;
-$on-laptop:        800px;
+$tablet-width: 600px;
+$desktop-width: 1024px;
 
-
-// Using media queries with like this:
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
 }
 
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin custom($width){
+  @media (min-width: #{$width}) {
+    @content;
+  }
+}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

@@ -76,10 +76,19 @@ body {
   position: relative; }
   .wrapper .main-title {
     width: 60%;
-    padding: 50px 0;
-    padding-left: 20px; }
+    padding: 20px;
+    padding-bottom: 50px;
+    padding-right: 0; }
     .wrapper .main-title h1 {
       font-size: 3rem; }
+  .wrapper .site-nav {
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end; }
+    .wrapper .site-nav a {
+      margin-right: 10px;
+      text-decoration: none; }
 
 .main-content {
   display: flex;
@@ -90,11 +99,20 @@ body {
   ***********/
   /************
   RECENT POSTS
-  *************/ }
+  *************/
+  /**************
+  ABOUT
+  **************/
+  /**********
+  CONTACT
+  **********/ }
   .main-content .main-section {
     position: relative;
     padding-bottom: 60px;
     border-bottom: 2px solid black;
+    width: 100vw;
+    margin: 0 auto; }
+  .main-content .main-projects, .main-content .main-blog-posts, .main-content .main-contact, .main-content .main-about {
     width: 90vw;
     margin: 0 auto; }
   .main-content .main-projects-gallery {
@@ -110,7 +128,10 @@ body {
     .main-content .main-projects-gallery .project-lrg {
       height: 300px;
       width: 300px;
-      margin-left: 0; }
+      margin-right: 0; }
+      @media (min-width: 665px) {
+        .main-content .main-projects-gallery .project-lrg {
+          margin-right: 10px; } }
     .main-content .main-projects-gallery .main-projects-group {
       width: 300px;
       display: flex;
@@ -124,6 +145,108 @@ body {
     margin-bottom: 0; }
     .main-content .main-blog .main-blog-posts .post-list .main-new-post li .main-post-header h1 a {
       text-decoration: none; }
+  .main-content .main-about {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90vw; }
+    .main-content .main-about .main-about-body {
+      width: 100%; }
+    .main-content .main-about .main-about-photo-gallery {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      margin: 10px auto;
+      margin-bottom: 20px;
+      width: 100%; }
+      @media (min-width: 600px) and (max-width: 1023px) {
+        .main-content .main-about .main-about-photo-gallery {
+          width: 500px; } }
+      .main-content .main-about .main-about-photo-gallery .image {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        margin: 5px; }
+        @media (min-width: 600px) and (max-width: 1023px) {
+          .main-content .main-about .main-about-photo-gallery .image {
+            width: calc((500px/3) - 10px); } }
+        .main-content .main-about .main-about-photo-gallery .image img {
+          width: 100%;
+          height: 140px;
+          object-fit: cover; }
+      .main-content .main-about .main-about-photo-gallery .below-fold {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        position: fixed; }
+        @media (min-width: 600px) and (max-width: 1023px) {
+          .main-content .main-about .main-about-photo-gallery .below-fold {
+            height: 140px;
+            width: calc((500px/3) - 10px);
+            opacity: 1;
+            position: relative; } }
+  .main-content .main-contact-form {
+    border: 2px solid black;
+    padding-top: 10%;
+    padding-bottom: 10%; }
+    .main-content .main-contact-form form {
+      width: 80%;
+      margin: 0 auto;
+      font-size: 1.2rem; }
+      .main-content .main-contact-form form label {
+        float: left;
+        display: inline-block;
+        text-align: left;
+        margin-right: 10px;
+        width: 100%; }
+      .main-content .main-contact-form form input[type='text'], .main-content .main-contact-form form input[type='email'], .main-content .main-contact-form form textarea {
+        color: #555;
+        width: 100%;
+        padding: 3px 0px 3px 5px;
+        margin-top: 2px;
+        margin-right: 6px;
+        margin-bottom: 10px;
+        border: 1px solid grey;
+        border-radius: 3px;
+        background: #fbfbfb;
+        height: 25px;
+        line-height: 15px;
+        outline: 0;
+        -webkit-box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
+        box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2); }
+      .main-content .main-contact-form form textarea {
+        height: 100px;
+        padding: 5px 0px 0px 5px; }
+      .main-content .main-contact-form form input[type='submit'] {
+        width: 100%;
+        background: #FFF;
+        border: 1px solid #CCC;
+        padding: 10px 25px 10px 25px;
+        color: #333;
+        border-radius: 5px;
+        font-size: 1.2rem; }
+        .main-content .main-contact-form form input[type='submit']:hover {
+          cursor: pointer;
+          border-color: #ADADAD; }
+
+.site-footer .wrapper .footer {
+  margin-top: 20px; }
+  .site-footer .wrapper .footer .footer-social {
+    width: 180px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px; }
+    .site-footer .wrapper .footer .footer-social a {
+      text-decoration: none;
+      color: black; }
+      .site-footer .wrapper .footer .footer-social a i {
+        width: 50px;
+        height: 50px; }
+  .site-footer .wrapper .footer .footer-rights {
+    text-align: center; }
+    .site-footer .wrapper .footer .footer-rights p {
+      font-size: 0.85rem; }
+      .site-footer .wrapper .footer .footer-rights p a {
+        text-decoration: none; }
 
 /************
 BANNER
