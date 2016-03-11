@@ -186,15 +186,20 @@ a {
           li {
             .main-post-header {
               h1 {
-                font-size: 2rem;
                 line-height: 1rem;
                 margin-bottom: 0;
                 a {
+                  font-size: 1.5rem;
                   text-decoration: none;
+                  color: $banner-color;
+                  text-shadow: 1px 1px 0 rgba($accent-color,1);
+
+                  &:hover {
+                    color: $accent-color;
+                  }
                 }
               }
               p {
-
               }
             }
 
@@ -212,14 +217,11 @@ a {
   **************/
   .main-about {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
 
     .main-about-body{
         width: 100%;
-
-        @include tablet {
-          width: calc(100% - 240px);
-        }
+        font-family: 'Lora', serif;
     }
     .main-about-photo-gallery {
       display: flex;
@@ -230,28 +232,33 @@ a {
       margin-left: 0;
       width: 100%;
 
-      @include tablet {
-          justify-content: flex-start;
-          margin-top: 0;
-          width: 220px;
-          height: 220px;
+      @include custom(850px) {
+          justify-content: center;
+          width: 700px;
+          margin: 0 auto;
+          margin-bottom: 20px;
       }
 
       .image {
-        width: 100px;
-        height: 100px;
+        width: 118px;
+        height: 108px;
         border: 2px solid black;
         margin: 5px;
+        overflow: hidden;
+        border: 2px solid $light-neutral-color;
 
-        @include tablet {
-          margin-bottom: 0;
+        @include custom(850px){
+          width: calc((700px/4) - 10px);
+          height: 150px;
         }
 
         img {
           width: 100%;
-          height: 140px;
+          // height: 140px;
           object-fit: cover;
         }
+
+
       }
     }
   }
@@ -386,125 +393,139 @@ BANNER
 .main-section {
 
   .main-section-banner {
-      position: relative;
-      width: 300px;
+    position: relative;
+    width: 300px;
+
+    @include tablet {
+      width: 400px;
+    }
+
+    @include desktop {
+      width: 500px;
+    }
+
+    margin: 0 auto;
+    margin-bottom: 80px;
+
+    .banner-body {
+      width: $banner-width;
 
       @include tablet {
-        width: 400px;
+        width: 300px;
       }
 
       @include desktop {
-        width: 500px;
+        width: 400px;
       }
 
-      margin: 0 auto;
-      margin-bottom: 80px;
-
-      .banner-body {
-        width: $banner-width;
-
-        @include tablet {
-          width: 300px;
-        }
-
-        @include desktop {
-          width: 400px;
-        }
-
-        height: 50px;
-        background-color: $banner-color;
-        position: absolute;
-        top: -30px;
-        left: 50px;
-        z-index: 999;
-        box-shadow: 0 1px 2px darken($accent-color, 10%);
-       
-        h1 {
-          text-align: center;
-          margin-top: 10px;
-          color: $light-neutral-color;
-          text-shadow: 1px 1px 0 rgba($accent-color,1);
-          a {
-            font-size: 1.5rem;
-          }
-        }
-      }
-
-      .banner-tail-left {
-        width: 50px;
-        height: 40px;
-        background-color: darken($banner-color, 6);
-        position: absolute;
-        top: 0px;
-        left: 15px;
-        box-shadow: 1px 1px 1px darken($accent-color, 15%);
-        
-        &:after {
-          content: ' ';
-          position: absolute;
-          width: 0;
-          height: 0;
-          border-top: 20px solid transparent;
-          border-bottom: 20px solid transparent;
-          border-left: 20px solid $neutral-color;
-          top: 0;
-          left: -1px;
-        }
-        
-        &:before {
-          content: ' ';
-          position: absolute;
-          width: 0;
-          height: 0;
-          border-left: 15px solid transparent;
-          border-bottom: 5px solid transparent;
-          border-top: 20px solid darken($banner-color, 30%);
-          top: 20px;
-          left: 35px;
-        }
-      }
-
-      .banner-tail-right {
-        width: 50px;
-        height: 40px;
-        background-color: darken($banner-color, 6);
-        position: absolute;
-        top: 0px;
-        left: $right-flag;
-
-        @include tablet {
-          left: 335px;
-        }
-
-        @include desktop {
-          left: 435px;
-        }
-
-        box-shadow: -1px 1px 1px darken($banner-color, 15%);
-        
-        &:after {
-          content: ' ';
-          position: absolute;
-          width: 0;
-          height: 0;
-          border-right: 15px solid transparent;
-          border-bottom: 5px solid transparent;
-          border-top: 20px solid darken($banner-color, 20%);
-          top: 20px;
-          left: 0;
-        }
-        
-        &:before {
-          content: ' ';
-          position: absolute;
-          width: 0;
-          height: 0;
-          border-top: 20px solid transparent;
-          border-bottom: 20px solid transparent;
-          border-right: 20px solid $neutral-color;
-          top: 0px;
-          left: 31px;
+      height: 50px;
+      background-color: $banner-color;
+      position: absolute;
+      top: -30px;
+      left: 50px;
+      z-index: 999;
+      box-shadow: 0 1px 2px darken($accent-color, 10%);
+     
+      h1 {
+        text-align: center;
+        margin-top: 10px;
+        color: $light-neutral-color;
+        text-shadow: 1px 1px 0 rgba($accent-color,1);
+        a {
+          font-size: 1.5rem;
         }
       }
     }
+
+    .banner-tail-left {
+      width: 50px;
+      height: 40px;
+      background-color: darken($banner-color, 6);
+      position: absolute;
+      top: 0px;
+      left: 15px;
+      box-shadow: 1px 1px 1px darken($accent-color, 15%);
+      
+      &:after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid $neutral-color;
+        top: 0;
+        left: -1px;
+      }
+      
+      &:before {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-top: 20px solid darken($banner-color, 30%);
+        top: 20px;
+        left: 35px;
+      }
+    }
+
+    .banner-tail-right {
+      width: 50px;
+      height: 40px;
+      background-color: darken($banner-color, 6);
+      position: absolute;
+      top: 0px;
+      left: $right-flag;
+
+      @include tablet {
+        left: 335px;
+      }
+
+      @include desktop {
+        left: 435px;
+      }
+
+      box-shadow: -1px 1px 1px darken($banner-color, 15%);
+      
+      &:after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-right: 15px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-top: 20px solid darken($banner-color, 20%);
+        top: 20px;
+        left: 0;
+      }
+      
+      &:before {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-right: 20px solid $neutral-color;
+        top: 0px;
+        left: 31px;
+      }
+    }
   }
+}
+
+
+********************************
+
+
+
+
+
+
+
+
+
+
+
