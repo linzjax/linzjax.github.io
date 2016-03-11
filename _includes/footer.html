@@ -19,6 +19,9 @@
         <i class='fa fa-instagram fa-3x'></i>
       </a>
       {% endif %}
+      <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+        <i class='fa fa-rss-square fa-3x'></i>
+      </a>
     </div>
     <div class='footer-rights'>
       <p class="footer-heading"><i class='fa fa-copyright'></i>{{ site.author }} 2016 - <a href='#{ site.email }'>{{site.email }}</a></p>
