@@ -39,21 +39,22 @@ p {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
-    transition: background-color ease-in 0.5s;
+    transition: all ease-in 0.5s;
     a {
       margin-right: 10px;
       color: $font-color;
       text-decoration: none;
 
       &:hover {
-        color: $banner-color;
+        color: $accent-color;
       }
     }
   }
 
   .site-nav.sticky {
-    background-color: rgba($neutral-color, 0.8);
-    box-shadow: 0 0 5px $font-color;
+    background-color: rgba($banner-color, 1);
+    border-bottom: 2px solid $accent-color;
+    box-shadow: 0 0 5px $accent-color;
   }
 }
 
@@ -173,6 +174,51 @@ p {
       width: calc(50% - 5px);
       margin-bottom: 10px;
       background-color: white;
+      overflow: hidden;
+      position: relative;
+      border-left: 5px solid $banner-color;
+      border-bottom: 5px solid $banner-color;
+      border-top: 5px solid $accent-color;
+      border-right: 5px solid $accent-color;
+
+      img {
+        height: 100%;
+      }
+
+      .main-projects-project-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        background-color: rgba($light-neutral-color, 0.8);
+        transition: all ease-in 0.5s;
+        text-align: center;
+        padding: 25% 20px;
+        &:hover {
+          transition: all ease-in 0.5s;
+        }
+        h1 {
+          font-size: 2rem;
+          color: $banner-color;
+        }
+
+        p {
+           color: $font-color;
+        }
+        .good-morning-container {
+          margin-top: -15px;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        .main-projects-project-hover {
+          opacity: 1;
+        }
+      }
     }
 
     .project-lrg {
@@ -191,7 +237,14 @@ p {
       justify-content: space-between;
 
       .project-sm {
-          height: 145px;
+        height: 145px;
+        h1 {
+          font-size: 1.7rem;
+        }
+
+        img.puzzle-15, img.good-morning {
+          width: 100%;
+        }
       }
     }
   }
