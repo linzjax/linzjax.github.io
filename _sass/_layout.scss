@@ -28,7 +28,7 @@ p {
 }
 
 .site-header {
-    .site-nav {
+  .site-nav {
     position: fixed;
     width: 100vw;
     top: 0;
@@ -37,17 +37,105 @@ p {
     z-index: 999;
     // padding-top: 10px;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: flex-end;
-    transition: all ease-in 0.5s;
+    transition: top ease-in-out 0.5s;
     a {
       margin-right: 10px;
-      color: $font-color;
+      color: $accent-color;
       text-decoration: none;
 
       &:hover {
-        color: $accent-color;
+        color: $font-color;
       }
+    }
+
+    .site-nav-hamburger {
+      position: relative;
+      align-items: right;
+      z-index: 999;
+      cursor: pointer;
+      height: 35px;
+      width: 100vw;
+      padding: 10px 35px 16px 0px;
+      // transition: top ease-in-out 0.5s;
+
+      span, span:before, span:after {
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        // border-radius: 8px;
+        background-color: $font-color;
+        right: 20px;
+        content: ' ';
+        
+        transition: all ease-in-out 0.5s;
+      }
+      
+      span:before {
+        top: 6px;
+        right: 0;
+      }
+      span:after {
+        top: 13px;
+        right: 0;
+      }
+      
+      div:after {
+        
+      }
+    }
+    
+    .site-nav-hamburger.active {
+      top: -5px;
+      span:before, #nav-toggle.active span:after {
+        top: 13px;
+      }
+      span {
+        background: transparent !important;
+      }
+      span:before {
+        transform: rotate(45deg);
+      }
+      span:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .site-nav-body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    // height: 100px;
+    background-color: $light-neutral-color;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: baseline;
+    transition: top ease-in-out 0.5s;
+    opacity: 1;
+    a.page-link {
+      height: 40px;
+      width: 100vw;
+      padding: 10px 20px;
+      border-bottom: 2px solid rgba($neutral-color,0.5);
+      transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
+      opacity: 1;
+      &:hover {
+        background-color: $neutral-color;
+        border-bottom: $neutral-color;
+      }
+    }
+  }
+
+  .site-nav-body.hidden {
+    top: -200px;
+    transition: top ease-in-out 0.5s;
+    opacity: 0;
+    a.page-link {
+      opacity: 0;
     }
   }
 
@@ -55,6 +143,67 @@ p {
     background-color: rgba($banner-color, 1);
     border-bottom: 2px solid $accent-color;
     box-shadow: 0 0 5px $accent-color;
+    height: 45px;
+
+    .site-nav-hamburger {
+      span, span:before, span:after {
+        background-color: $accent-color;
+      }
+    }
+  }
+  .site-nav.active {
+    top: 200px;
+  }
+
+  @include customTwo(1020px, 1030px) {
+    .site-nav-body, .site-nav-body.hidden {
+      top: -200px;
+      // transition: none;
+    }
+  }
+
+  @include desktop {
+    .site-nav-hamburger {
+      display: none;
+    }
+    .site-nav-body, .site-nav-body.hidden {
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      padding: 0;
+      top: 0;
+      width: 100vw;
+      background-color: transparent;
+      opacity: 1;
+
+      a.page-link {
+        margin: 0;
+        width: auto;
+        border: none;
+        color: $font-color;
+        opacity: 1;
+
+        &:hover {
+          color: $accent-color;
+          background-color: transparent;
+        }
+      }
+    }
+    .site-nav.active {
+      top: 0;
+      transition: none;
+    }
+    .site-nav.sticky {
+      .site-nav-body {
+        a.page-link {
+
+          color: $accent-color;
+
+          &:hover {
+            color: $font-color;
+          }
+        }
+      }
+    }
   }
 }
 
