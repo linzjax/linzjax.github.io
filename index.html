@@ -1,54 +1,154 @@
 ---
 layout: default
 ---
-    <div class="title">
-      <a  href="{{ site.baseurl }}/">
+      <div class="main-title">
         <h1>Lindsey Jacks</h1>
-        </a>
-        <p>Front-End Developer</p>
-        <p>Potentially Coherent</p>
+        <p><em>noun</em><br />1. Front-end developer.<br /> 2. Occasionally coherent person with too much time on her hands.</p>
       </div>
+    </div>
+  </div><!-- wrapper -->
+</header>
+
+<div class="wrapper main-content">
+  <div class="main-section main-section-projects">
+    <div class='main-section-banner'>
+      <div class='banner-tail-left'></div>
+      <div class='banner-body'>
+        <h1><a name='projects'>Current Projects</a></h1>
       </div>
-    </a>
-
-
-
-    </header>
-
-<div class="page-content">
-  <div class="wrapper">
-
-    <div class="home">
-      <div class ="home-social">
-        <div class="home-social-insta">
-          <p><a href='https://www.instagram.com/linzjaxx/'>@linzjaxx</a></p>
-          <!-- INSTANSIVE WIDGET --><script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/a8a2688f8359be1219924fef3a0c195936f30bed.html" id="instansive_a8a2688f83" name="instansive_a8a2688f83"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+      <div class='banner-tail-right'></div>
+    </div>
+    <div class='main-projects'>
+      <div class='main-projects-gallery'>
+        <div class='main-projects-project project-lrg'>
+          <img src='./assets/img/fp_final_design.png'>
+          <a href='http://fieldpapers.org/compose#15/40.6842/-73.9843'><div class='main-projects-project-hover'><h1>Field Papers</h1><p>Redesigning the atlas interaction UI</p></div></a>
+        </div>
+        <div class='main-projects-group'>
+          <div class='main-projects-project project-sm'>
+            <img src='./assets/img/code_pen.png'>
+            <a href='http://codepen.io/linzjax/'><div class='main-projects-project-hover'><h1>Code Pen</h1>
+            </div></a>
+          </div>
+          <div class='main-projects-project project-sm'>
+            <img src='./assets/img/puzzle_15.png' class='puzzle-15'>
+            <a href='http://linzjax.github.io/Puzzle15'><div class='main-projects-project-hover'><h1>15 Puzzle</h1>
+            </div></a>
+          </div>
+          <div class='main-projects-project project-sm '>
+            <img src='./assets/img/good_freaking_morning.png' class='good-morning'>
+            <a href='https://github.com/linzjax/goodFreakinMorning'><div class='main-projects-project-hover'><h1 class='good-morning-container'>Good Freakin' Morning</h1>
+            </div></a>
+          </div>
+          <div class='main-projects-project project-sm'>
+            <img src='./assets/img/do_i_eat_this.png'>
+            <a href='https://github.com/linzjax/canIEatThis'><div class='main-projects-project-hover'><h1 class='good-morning-container'>Do I Eat This?</h1>
+            </div></a>
+          </div>
         </div>
       </div>
-      <div class="home-posts">
-        <h1>Recent Posts</h1>
+    </div>
+  </div>
+
+  <div class="main-section main-section-blog">
+    <div class='main-section-banner'>
+      <div class='banner-tail-left'></div>
+      <div class='banner-body'>
+        <h1><a name='blog'>Recent Posts</a></h1>
+      </div>
+      <div class='banner-tail-right'></div>
+    </div>
+    <div class='main-blog'>
+      <div class="main-blog-posts">
         <ul class="post-list">
             {% for post in site.posts limit: 2%}
-            <div class='new-post'>
+            <div class='main-new-post'>
               <li>
-                <header class="post-header">
+                <header class="main-post-header">
                   <h1>
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                   </h1>
-                   <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
+                   <p class="main-post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
                 </header>
 
-                <article class="post-excerpt">
+                <article class="main-post-excerpt">
                    {{ post.excerpt }}
-                   <a href='{{post.url | prepend: site.baseurl }}'>...</a>
                 </article>
 
               </li>
           </div>
             {% endfor %}
           </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class='main-section main-section-about'>
+    <div class='main-section-banner'>
+      <div class='banner-tail-left'></div>
+      <div class='banner-body'>
+        <h1><a name='about'>About</a></h1>
+      </div>
+      <div class='banner-tail-right'></div>
+    </div>
+    <div class='main-about'>
+      <div class='main-about-photo-gallery'>
+        <div class='image skew-right'>
+          <img src='/assets/img/header_image2.jpg' alt='' class=''>
         </div>
-        <div class="home-projects">
-          <h1>Current Projects</h1>
-          <p>Coming soon...</p>
+
+        <div class='image skewed-straight'>
+          <img src='/assets/img/halloween.jpg' alt='' class=''>
         </div>
+
+
+        <div class='image skewed-straight'>
+          <img src='/assets/img/recurser.jpg' alt='' class=''>
+        </div>  
+
+        <div class='image below-fold skewed-straight'>
+          <img src='/assets/img/painter.jpg' alt='' class=''>
+        </div>
+      </div>
+      <div class='main-about-body'>
+          <p>You'll have to forgive me, I've never been very good at summing things up. I can barely sum up a movie, let alone a few decades. But I'll give it a go. </p>
+
+          <p>
+          My story began in Arkansas, had a couple of chapters in Washington, D.C., and the latest chapter takes place in Brooklyn, NY at the top of a five-story walkup. Along the way I developed strong feelings about BBQ, a passion for non-profit work, and a love of programming. Before settling on programing, I was a painter, dancer, online-hotline volunteer, bartender, office manager, administrative assistant, and a Sunlighter. 
+        </p>
+
+          <p>After several months of classes, self-teaching (and loving prodding from friends), I decided to quit my job and follow my dream to become a full-time programmer. I spent three months at the Recurse Center, which I followed-up with a three month internship through Outreachy. Now I work with Cadasta in the perfect combination of everything I love: non-profit, programming, and open data.
+          </p>
+
+          <p>When I'm not working, I enjoy painting, dancing, solving puzzles, drinking good bourbon, and reading Terry Pratchett.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class='main-section main-section-contact'>
+    <div class='main-section-banner'>
+      <div class='banner-tail-left'></div>
+      <div class='banner-body'>
+        <h1><a name='contact'>Contact</a></h1>
+      </div>
+      <div class='banner-tail-right'></div>
+    </div>
+    <div class='main-contact'>
+      <div class='main-contact-form'>
+        <form action="https://getsimpleform.com/messages?form_api_token=9fbc503182bcbd16d336d1901064642e" id='contact-form' method='post'>
+          <input type='hidden' name='redirect_to' value='{{site.url}}/sent' />
+          <label for='email'>Email</label>
+          <input type='email' name='email' id='email'>
+          <label for='name'>Name</label>
+          <input type='text' name='name' id='name'>
+          <input type="hidden" name="utf8" value="✓">
+          <label for='message'>What's on your mind?</label>
+          <textarea name='message' id='message'></textarea>
+          <input type='submit' value='Send'>
+        </form>
+        <div id='main-contact-form-message'></div>
+      </div>
+    </div>
+  </div>
+</div>
+      

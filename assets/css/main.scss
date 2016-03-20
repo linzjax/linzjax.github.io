@@ -3,51 +3,136 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
-$base-font-family: 'Old Standard TT', serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-$header-font-family: 'Over the Rainbow', cursive;
-
+$base-font-size:   18px;
 $spacing-unit:     30px;
 
+$accent-color: #1F6770;
+$font-color: #130B08;
+$banner-color: #6DBEA0;
+$neutral-color: #ebd6b6;
+$light-neutral-color: #ffffe8;
+
+$banner-width: 200px;
+
+$right-flag: $banner-width + 35px;
 
 
+$tablet-width: 600px;
+$desktop-width: 1024px;
 
-$teal-color: #5bc292;
-$darkest-color: #020002;
-$background-color: #FFFFFF;
-$font-color: #1B2022;
-
-
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
 }
 
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
 
+@mixin custom($width){
+  @media (min-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin customTwo($min-width, $max-width){
+  @media (min-width: #{$min-width}) and (max-width: #{$max-width}) {
+    @content;
+  }
+}
+
+@-webkit-keyframes fadeIn { from { 
+    opacity:0; 
+    opacity: 1\9; /* IE9 only */
+  } to { 
+    opacity:1; 
+  } 
+}
+
+@-moz-keyframes fadeIn { 
+  from { 
+    opacity:0; 
+    opacity: 1\9; /* IE9 only */
+  } to { 
+    opacity:1; 
+  }
+}
+
+@keyframes fadeIn { 
+  from { 
+    opacity:0; 
+    opacity: 1\9; /* IE9 only */
+  } to { 
+    opacity:1; 
+  }
+}
+
+@mixin fadeItIn {
+  opacity:0;  
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:0.5s;
+  -moz-animation-duration:0.5s;
+  animation-duration:0.5s;
+}
+
+@mixin darkOverlay {
+  &:after{
+    content: "";
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;  // Take note of this negative z-index and compare to each article's positive z-index. This helps your content to show up over the overlay.
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+@mixin gradient($first, $second) {
+  background: $first; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($first, $second); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($first, $second); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($first, $second); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($first, $second); /* Standard syntax */
+}
+
+@mixin checkers {
+  font: normal 0.5px/normal 'Lora', serif;
+  color: rgba(255,255,255,1);
+  background: -webkit-linear-gradient(135deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), -webkit-linear-gradient(45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), #EBD6B6;
+  background: -moz-linear-gradient(-45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), -moz-linear-gradient(45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), #EBD6B6;
+  background: linear-gradient(-45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), linear-gradient(45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), #EBD6B6;
+  background-position: auto auto;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: 200em 200em;
+  background-size: 200em 200em;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  -webkit-transform: none;
+  transform: none;
+  -webkit-transform-origin: 50% 50% 0;
+  transform-origin: 50% 50% 0;
+}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
