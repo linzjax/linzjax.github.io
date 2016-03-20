@@ -135,8 +135,8 @@ layout: default
     </div>
     <div class='main-contact'>
       <div class='main-contact-form'>
-        <form action="https://getsimpleform.com/messagesajax?form_api_token=9fbc503182bcbd16d336d1901064642e" id='contact-form' method='post'>
-          <input type='hidden' name='redirect_to' value='<localhost:4000/sent>' />
+        <form action="https://getsimpleform.com/messages?form_api_token=9fbc503182bcbd16d336d1901064642e" id='contact-form' method='post'>
+          <input type='hidden' name='redirect_to' value='{{site.url}}/sent' />
           <label for='email'>Email</label>
           <input type='email' name='email' id='email'>
           <label for='name'>Name</label>

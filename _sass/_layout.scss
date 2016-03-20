@@ -39,7 +39,7 @@ p {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
-    transition: top ease-in-out 0.5s;
+    transition: top ease-in-out 0.5s, background-color ease-in-out 0.5s, border-bottom ease-in-out 0.5s;
     a {
       margin-right: 10px;
       color: $accent-color;
@@ -58,7 +58,6 @@ p {
       height: 35px;
       width: 100vw;
       padding: 10px 35px 16px 0px;
-      // transition: top ease-in-out 0.5s;
 
       span, span:before, span:after {
         position: absolute;
@@ -103,6 +102,11 @@ p {
     }
   }
 
+  .site-nav-row {
+    position: fixed;
+    right: 1000px;
+  }
+
   .site-nav-body {
     position: fixed;
     top: 0;
@@ -133,10 +137,7 @@ p {
   .site-nav-body.hidden {
     top: -200px;
     transition: top ease-in-out 0.5s;
-    opacity: 0;
-    a.page-link {
-      opacity: 0;
-    }
+    
   }
 
   .site-nav.sticky {
@@ -144,6 +145,7 @@ p {
     border-bottom: 2px solid $accent-color;
     box-shadow: 0 0 5px $accent-color;
     height: 45px;
+    transition: top ease-in-out 0.5s, background-color ease-in-out 0.5s, border-bottom ease-in-out 0.5s;
 
     .site-nav-hamburger {
       span, span:before, span:after {
@@ -155,28 +157,30 @@ p {
     top: 200px;
   }
 
-  @include customTwo(1020px, 1030px) {
-    .site-nav-body, .site-nav-body.hidden {
-      top: -200px;
-      // transition: none;
-    }
-  }
 
   @include desktop {
     .site-nav-hamburger {
       display: none;
     }
-    .site-nav-body, .site-nav-body.hidden {
+    .site-nav-body {
+      display: none;
+    }
+    .site-nav-row {
+      position: relative;
+      display: flex;
+      align-text: right;
       flex-flow: row nowrap;
       justify-content: flex-end;
       padding: 0;
       top: 0;
+      right: 20px;
       width: 100vw;
       background-color: transparent;
       opacity: 1;
 
       a.page-link {
         margin: 0;
+        margin-left: 20px;
         width: auto;
         border: none;
         color: $font-color;
