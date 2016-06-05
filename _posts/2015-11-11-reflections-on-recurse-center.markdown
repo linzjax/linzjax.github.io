@@ -2,7 +2,7 @@
 layout: post
 title:  "Reflections on Recurse Center"
 date:   2015-11-11 18:30:09
-categories: My experiences
+categories: my-experiences
 excerpt: "<p>If you had told me a year ago that I would quit my job, move to New York and attend a completely self-directed three month \"writers retreat\" for programmers, I would have laughed nervously and not made eye contact. Yet here I am, makin' eye contact like a pro, and full of advice for future Recursers.</p>"
 ---
 
