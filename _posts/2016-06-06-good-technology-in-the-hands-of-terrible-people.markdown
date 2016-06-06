@@ -1,6 +1,6 @@
 ---
 title:  "Good technology in the hands of terrible people"
-date:   2016-6-6 12:30:00
+date:   2016-6-6 3:00:00
 categories: musings
 excerpt: "<p>I, like many people, prefer to assume that people are inherently good, and we build apps with (I would hope) the best of intentions. However, this doesn't mean we can ignore the hidden costs of our technology. No matter how benign we may believe the app to be, we have to ask: if I were a terrible person, how would I use this for evil?</p>"
 ---
