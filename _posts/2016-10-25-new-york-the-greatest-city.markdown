@@ -1,6 +1,6 @@
 ---
 title:  "New York: The greatest city in the world... for some people."
-date:   2016-10-24 13:00:00
+date:   2016-10-25 13:00:00
 categories: musings
 excerpt: "<p>So, I only lasted a year in New York. I remember my uncle telling me that he only made it a year in New York and was begging his job to let him leave by the end of it. I remember pridefully laughing at how silly this was: New York will be great! He just couldn't handle it. I can.<br><br>
 
