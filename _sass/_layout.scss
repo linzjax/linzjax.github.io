@@ -416,10 +416,12 @@ p {
                 line-height: 1.5rem;
                 margin-bottom: 0;
                 margin-top: 30px;
+                font-family: 'Lora', serif;
                 a {
-                  font-size: 2rem;
+                  font-size: 1.5rem;
                   text-decoration: none;
                   color: $banner-color;
+                  // color: $font-color;
                   text-shadow: 1px 1px 0 rgba($accent-color,1);
 
                   &:hover {
@@ -765,11 +767,13 @@ BLOG PAGES
             margin-top: 10px;
             line-height: 1.5rem;
             margin-bottom: 0;
+            font-family: 'Lora', serif;
             .post-link {
-              font-size: 2rem;
+              font-size: 1.5rem;
               text-decoration: none;
               color: $banner-color;
-              text-shadow: 1px 1px 0 rgba($accent-color,1);
+              color: $font-color;
+              // text-shadow: 1px 1px 0 rgba($accent-color,1);
 
               &:hover {
                 color: $accent-color;
@@ -823,7 +827,8 @@ POST
   margin-bottom: 60px;
   h1 {
     color: $font-color;
-    font-size: 3rem;
+    font-family: 'Lora', serif;
+    font-size: 2rem;
     text-align: center;
   }
 }

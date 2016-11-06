@@ -1,18 +1,18 @@
 <header class="site-header">
   <nav class="site-nav">
     <div class="site-nav-body hidden">
-      <a class="page-link" href="{{site.url}}/">Home</a>
-      <a class="page-link" href="{{site.url}}/#projects">Projects</a>
-      <a class="page-link" href="{{site.url}}/blog">Blog</a>
-      <a class="page-link" href="{{site.url}}/#about">About</a>
-      <a class="page-link" href="{{site.url}}/#contact">Contact</a>
+      <a class="page-link" href="{{site.baseurl}}/">Home</a>
+      <a class="page-link" href="{{site.baseurl}}/#projects">Projects</a>
+      <a class="page-link" href="{{site.baseurl}}/blog">Blog</a>
+      <a class="page-link" href="{{site.baseurl}}/#about">About</a>
+      <a class="page-link" href="{{site.baseurl}}/#contact">Contact</a>
     </div>
     <div class="site-nav-row">
-      <a class="page-link" href="{{site.url}}/">Home</a>
-      <a class="page-link" href="{{site.url}}/#projects">Projects</a>
-      <a class="page-link" href="{{site.url}}/blog">Blog</a>
-      <a class="page-link" href="{{site.url}}/#about">About</a>
-      <a class="page-link" href="{{site.url}}/#contact">Contact</a>
+      <a class="page-link" href="{{site.baseurl}}">Home</a>
+      <a class="page-link" href="{{'/#projects' | prepend: 'site.baseurl'}}">Projects</a>
+      <a class="page-link" href="{{'/blog' | prepend: site.baseurl }}">Blog</a>
+      <a class="page-link" href="{{'/#about' | prepend: site.baseurl }}">About</a>
+      <a class="page-link" href="{{'/#contact' | prepend: site.baseurl }}">Contact</a>
     </div>
     <a href='#' class='site-nav-hamburger'>
       <span></span>
